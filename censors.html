@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>US censors Project</title>
+  <title>Covid 19 Dashboard</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/DSC_1913.JPG" rel="icon">
+  <link href="assets/img/DSC_1913.JPG" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -44,10 +44,8 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#analysis"><i class="bi bi-file-earmark-text navicon"></i><span>Analysis</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
@@ -62,15 +60,15 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">US Censors project</li>
+            <li class="current">Tablea Project</li>
           </ol>
         </nav>
-        <h1>Pyhton Project</h1>
+        <h1>Cholera Outbreak, Stockholm, 1853</h1>
       </div>
     </div><!-- End Page Title -->
 
     <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
+    <section id="portfolio-details" class="analysis">
 
 
         </div>
@@ -79,24 +77,144 @@
 
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
-              <h2>US Population Cencors Project</h2>
-              <img src="assets/img/powerbi/cps.png" class="img-fluid" alt="">
+              <h2>Cholera Outbreak, Stockholm, 1853: Data Analysis</h2>
+              <img src="assets/img/powerbi/Cholera outbreak dashboard.png" class="img-fluid" alt="">
             </div>
+
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                The importance of data analysis is limitless. It is widely known to be helpful in decision making process, however, its usefulness goes beyond this.
+
+                Data Analysis is important for studying and understanding past events, identifying how past events were handled and ultimately, make important decisions that will prevent repetitions of similar events and to ensure that future performance exceed the previous ones. Analysis of past events may also be useful for documenting the details of past occurrences.
+                 <p>
+                  This analysis therefore seeks to obtain information about the outbreak of cholera in Stockholm in the year 1853.
+                 </p>
+                <p>
+                Data Source: Quantum Analytics NG</p>
+                <p>
+                  Tools Used: Microsoft Excel, Microsoft Query Editor,Tableau
+                <p>
+
+                </p>
+                Objective: To understand the occurrence, trend and gravity of cholera outbreak in Stockholm.
+                <p>
+
+                The 1853 Stockholm cholera outbreak was a severe epidemic which occurred in Stockholm, Sweden in 1853. This was an historical event which happened as a result of a waterborne disease, caused by a bacterium that led to severe diarrhea and dehydration.
+                </p>
+                <p>DATA OVERVIEW<p>
+                  <p>
+                </p>
+
+                  The Dataset used in this Analysis may be limited in several ways because it was collected in a church environment by writing. The data was put together in Saint Catherine Parish in Stockholm.</p>
+
+                  The data contained a total of 8 columns and 248 rows with each row containing information of a victim that died as a result of cholera outbreak in the community. The colums hold information about:
+                </p>
+                <P>
+                  DÃ¶dsdatum (Date of death)<p>
+                    
+                  </p>
+                </P>
+                Namn (Name)<p>
+
+                </p>
+-Yrke (Profession)<p>
+
+</p>
+- KÃ¶n (Sex)<p>
+
+</p>
+- Ã…lder (Age)<p>
+
+</p>
+- FÃ¶rsamling (Assembly)<p>
+
+</p>
+- Arkivref (Archive)<p
+
+></p>
+- Sida (Ref Page)<p>
+   <p>
+    </p>
+                DATA CLEANING AND ANALYSIS
+                <p>
+                  <p>
+                    The dataset given was in Swedish Language, and for smooth and easy analysis, I started by translating this from Swedish to English.
+                  </p>
+                  <img src="assets/img/powerbi/k3.webp" class="img-fluid" alt="">
+                </div><p>
+                  I copied the given data from the excel file, opened Google Sheets and pasted the data. After copying, I moved to the next empty column and typed in the function to translate the document.
+                </p>
+                <p>Note that: Source Language — Swedish and the Target Language — English. These are represented as “sv” and “en” respectively while translating using Google Sheets.</p>
+                <p>
+                  Hence, the function: =GOOGLE TRANSLATE(reference_cell, “sv”,”en”) was used to translate the document from Swedish to English.
+                </p>
+                <img src="assets/img/powerbi/k6.webp" class="img-fluid" alt="">
+              </div><p>
+                And hence, a translated version of the data was obtained.
               </p>
-              <img src="assets/img/powerbi/censors py.png" class="img-fluid" alt="">
-            </div>
+              <img src="assets/img/powerbi/k5.webp" class="img-fluid" alt="">
+            </div><p>
+
+            </p>I created several other Columns like “Month Name”, “Day Name”, and a conditional Column named “Age Categories”. To categorize the ages into groups, I used a conditional column.<p>
+
+            </p>
+                 
+                <p>If Age ≤ 18- Children</p>
+                
+                <p>Age ≤ 40-Young Adults</p>
+                
+                <p>Age ≤ 59- Middle Aged </p>
+                
+                <p>Age > 60-Elderly</p>
+                
+                </p>
               <p>
-                Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
+                More columns were inserted to populate months and days in order to determine the trend of occurrence across different time frames. This was done by highlighting the column that contained the date of death, and selecting the date button. The name of day, and name of month was then obtained.
+              </p>
+              <img src="assets/img/powerbi/k7.webp" class="img-fluid" alt="">
+            </div><p>
+              <img src="assets/img/powerbi/k2.webp" class="img-fluid" alt="">
+            </div>
+            </p>
+            <p>DATA VISUALIZATION</p>
+              <p>
+                after data Transformation with power query Editor, I uploaded the dataset to tableau dextop which i used for this visualization .<p>
+                  The(KPIs) were calculated using the Tableau measures. The formulars used are as follows:
+                </p>
               </p>
 
               <p>
-                Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati earum et magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus deserunt assumenda tempore. Delectus voluptas necessitatibus est.
+                -Total No. Cases = COUNT(cholera)
               </p>
-
               <p>
-                Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
+                -Total # of Adults = COUNT(if [Age]> 17 then 1 END)
+              </p>
+              <p>
+                -Total # of Children = COUNT(if [Age] < 17 then 1 END)
+              </p>
+              <p>
+                -Total# of Males = COUNT(if CONTAINS([Gender],"M") then 1 END)
+              </p>
+              <p>
+                -Total# of females = COUNT(if CONTAINS([Gender],"F") then 1 END)
+              </p>
+              <p>
+                FINDINGS
+              </p>
+              <p>
+                -248 cases were recorded with a total of 130 female deaths and 118 male deaths. Hence, more Females died as a result of cholera outbreak in Stockholm, Sweden than Males
+              </p>
+              <p>
+                - The outbreak of took place within a period of 4 months: August, September, October and November with the highest death recorded in September(183) and the least death recorded in November(11).
+              </p>
+              
+              <p>
+                - Children, house wives,enemployed and retiree were most were affected among all the proffession by this outbreak.
+              </p>
+              <p>
+                -Middle aged with 85 deaths and young adults with 81 death have the highest number of deaths
+              </p>
+              <p>
+               Thanks
               </p>
 
             </div>
@@ -104,11 +222,12 @@
 
           <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
-              <h3>US Population Censors</h3>
+              <h3>Cholera Outbreak, Stockholm, 1853</h3>
               <ul>
-                <li><strong>Category</strong> python project</li>
-                <li><strong>Project URL</strong> <a href="http://localhost:8890/notebooks/Python%20Projects/Onoriose%20Karo%20MAjesty%20(July%20Cohort%20DAF)%20CENSUS%20PROJECT.ipynb">Jupiter Notebook </a></li>
-                <li><a href="http://localhost:8890/notebooks/Python%20Projects/Onoriose%20Karo%20MAjesty%20(July%20Cohort%20DAF)%20CENSUS%20PROJECT.ipynb" class="btn-visit align-self-start">Visit Website</a></li>
+                <li><strong>Category</strong> Tableau Project</li>
+                  <li><strong>Project URL</strong> <a href="https://public.tableau.com/app/profile/karo.onoriose/viz/KoleraoutbreakDashboard/Dashboard1">Tableau Public </a></li>
+                  <li><a href="https://github.com/karomajesty" class="btn-visit align-self-start">Visit Github</a></li>
+                  <li><a href="https://public.tableau.com/app/profile/karo.onoriose/vizzes" class="btn-visit align-self-start">More tableau projects </a></li>
               </ul>
             </div>
           </div>
