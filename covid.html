@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Covid 19 Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/DSC_1913.JPG" rel="icon">
+  <link href="assets/img/DSC_1913.JPG" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#analysis"><i class="bi bi-file-earmark-text navicon"></i><span>Analysis</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Tableau Project</li>
+          </ol>
+        </nav>
+        <h1>Cholera Outbreak, Stockholm, 1853</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Cholera Outbreak, Stockholm, 1853: Data Analysis</h2>
+              <img src="assets/img/Dashboard 1.png" class="img-fluid" alt="">
+            </div>
+
+            <p>
+              COVID-19, also known as coronavirus disease 2019, is caused by the SARS-CoV-2 virus. It emerged in December 2019 and quickly spread worldwide, leading to a global pandemic. The virus primarily spreads through respiratory droplets when an infected person coughs, sneezes, or talks
+               <p>
+                This analysis therefore seeks to obtain information about the Covid-19 Situation according to WHO.
+               </p>
+              <p><h2>DATA SOURCE: WHO website</h2>
+              </p>
+              <p><h2>Tools Used:  Tableau</h2>
+                
+              <p>
+
+              </p>
+              Objective: To understand the occurrence, trend and gravity of the COVID-19 pandemic.
+              <p>
+              </p>
+              <p><h2>DATA OVERVIEW</h2><p>
+                <p>
+              </p></p>
+
+                The data contained a total of 12 columns and 237 rows . The colums hold information about:
+              </p>
+              <P>
+                Country<p>
+                  
+                </p>
+              </P>
+              Who Region<p>
+
+              </p>
+-Cases-Culmunative Total<p>
+
+</p>
+- Case per 100000 of Population<p>
+
+</p>
+- Cases - newly Reported in last 7 days<p>
+
+</p>
+- Cases - newly reported last 7 days per 100000 of population<p>
+
+</p>
+- Cases in last 1 hour<p
+
+></p>
+-Deaths-Culmunative Total<p>
+
+</p>
+- Deaths per 100000 of Population<p>
+
+</p>
+- Deaths - newly Reported last 7 days<p>
+
+</p>
+- Deaths - newly reported last 7 days per 100000 of population<p>
+
+</p>
+- Deaths in last 1 hour<p
+
+></p>
+  </p>
+ <h2>DATA CLEANING AND ANALYSIS</h2> 
+              <p>
+                <p>
+                  The Data Set did not require any Cleaning
+                </p>
+                <img src="assets/img/covid excel.png" class="img-fluid" alt="">
+              </div>
+          <p><h2>DATA VISUALIZATION</h2></p>
+            <p>
+              I uploaded the dataset to tableau desktop which I used for Analysis and visualization .<p>
+                The(KPIs) were calculated using the Tableau measures Values. The formulars used are as follows:
+              </p>
+            </p>
+
+            <p>
+              -Cases=sum(-Cases-Culmunative)
+            </p>
+            <p>
+              -Last 7 days = sum(cases - last 7 days)
+            </p>
+            <p>
+              -per 100000 pop= sum(cases per 100000 of population)
+            </p>
+            <p><p>.
+      <div>
+    </p>
+              <h2>FINDINGS</h2>
+            </p>
+      <p><img src="assets/img/cases by country.png" class="img-fluid" alt=""></p>
+            <p>
+              -<h3>United States (103,436,829) and China(99,320,286) are the Countries with the highest Number of cases</h3>
+            </p>
+            <p><img src="assets/img/death by country.png" class="img-fluid" alt="">
+              <h3>- united State and Brazil Hold the record of the highest Number of deaths.</h3>
+            </p>
+            
+            <p><img src="assets/img/cases per 10000 by region.png" class="img-fluid" alt="">
+              - <p><h3>Europe and the Americas Are the WHO Regions with the most cases per 100000 of population</h3></p>
+            </p>
+            <p><img src="assets/img/Africa.png" class="img-fluid" alt="">
+              <h3>- African, Eastern Mediterarnean and South East Asian countries  are the countries hit the least by the pandemic</h3>
+            </p>
+            <p>
+             Thanks
+            </p>
+
+            </div>
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-info">
+                <h3>Cholera Outbreak, Stockholm, 1853</h3>
+                <ul>
+                  <li><strong>Category</strong> Tableau Project</li>
+                  <li><strong>Project URL</strong> <a href="https://public.tableau.com/app/profile/karo.onoriose/viz/WHOcovid19dashboard_17014994637960/Dashboard1">Tableau Public </a></li>
+                  <li><a href="https://github.com/karomajesty" class="btn-visit align-self-start">Visit Github</a></li>
+                  <li><a href="https://public.tableau.com/app/profile/karo.onoriose/vizzes" class="btn-visit align-self-start">More tableau projects</a></li>
+                </ul>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+          </div>
+
+
+
+    </section><!-- /Portfolio Details Section -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><!-- End Section Title -->
+    
+          <div class="container" data-aos="fade" data-aos-delay="100">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+              </div>
+    
+    
+    
+        </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p></p>
+      <div class="social-links d-flex justify-content-center">
+
+        <a href="https://github.com/karomajesty"><i class="bi bi-github"></i></a>
+        <a href="http://www.linkedin.com/in/karo-onoriose-a95128244"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
