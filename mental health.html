@@ -45,7 +45,7 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#analysis"><i class="bi bi-file-earmark-text navicon"></i><span>Analysis</span></a></li>
+        <li><a href="#analysis"><i class="bi bi-file-earmark-text navicon"></i><span>analysis</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
@@ -60,7 +60,7 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Tablea Project</li>
+            <li class="current">Tableau Project</li>
           </ol>
         </nav>
         <h1>Cholera Outbreak, Stockholm, 1853</h1>
@@ -68,7 +68,7 @@
     </div><!-- End Page Title -->
 
     <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="analysis">
+    <section id="analysis" class="analysis section">
 
 
         </div>
@@ -78,165 +78,181 @@
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
               <h2>Cholera Outbreak, Stockholm, 1853: Data Analysis</h2>
-              <img src="assets/img/powerbi/Cholera outbreak dashboard.png" class="img-fluid" alt="">
+              <img src="assets/img/Dashboard 1.png" class="img-fluid" alt="">
             </div>
 
+            <p>
+              COVID-19, also known as coronavirus disease 2019, is caused by the SARS-CoV-2 virus. It emerged in December 2019 and quickly spread worldwide, leading to a global pandemic. The virus primarily spreads through respiratory droplets when an infected person coughs, sneezes, or talks
+               <p>
+                This analysis therefore seeks to obtain information about the Covid-19 Situation according to WHO.
+               </p>
+              <p><h2>DATA SOURCE: WHO website</h2>
+              </p>
+              <p><h2>Tools Used:  Tableau</h2>
+                
               <p>
-                The importance of data analysis is limitless. It is widely known to be helpful in decision making process, however, its usefulness goes beyond this.
 
-                Data Analysis is important for studying and understanding past events, identifying how past events were handled and ultimately, make important decisions that will prevent repetitions of similar events and to ensure that future performance exceed the previous ones. Analysis of past events may also be useful for documenting the details of past occurrences.
-                 <p>
-                  This analysis therefore seeks to obtain information about the outbreak of cholera in Stockholm in the year 1853.
-                 </p>
+              </p>
+              Objective: To understand the occurrence, trend and gravity of the COVID-19 pandemic.
+              <p>
+              </p>
+              <p><h2>DATA OVERVIEW</h2><p>
                 <p>
-                Data Source: Quantum Analytics NG</p>
-                <p>
-                  Tools Used: Microsoft Excel, Microsoft Query Editor,Tableau
-                <p>
+              </p></p>
 
+                The data contained a total of 12 columns and 237 rows . The colums hold information about:
+              </p>
+              <P>
+                Country<p>
+                  
                 </p>
-                Objective: To understand the occurrence, trend and gravity of cholera outbreak in Stockholm.
-                <p>
+              </P>
+              Who Region<p>
 
-                The 1853 Stockholm cholera outbreak was a severe epidemic which occurred in Stockholm, Sweden in 1853. This was an historical event which happened as a result of a waterborne disease, caused by a bacterium that led to severe diarrhea and dehydration.
-                </p>
-                <p>DATA OVERVIEW<p>
-                  <p>
-                </p>
-
-                  The Dataset used in this Analysis may be limited in several ways because it was collected in a church environment by writing. The data was put together in Saint Catherine Parish in Stockholm.</p>
-
-                  The data contained a total of 8 columns and 248 rows with each row containing information of a victim that died as a result of cholera outbreak in the community. The colums hold information about:
-                </p>
-                <P>
-                  DÃ¶dsdatum (Date of death)<p>
-                    
-                  </p>
-                </P>
-                Namn (Name)<p>
-
-                </p>
--Yrke (Profession)<p>
+              </p>
+-Cases-Culmunative Total<p>
 
 </p>
-- KÃ¶n (Sex)<p>
+- Case per 100000 of Population<p>
 
 </p>
-- Ã…lder (Age)<p>
+- Cases - newly Reported in last 7 days<p>
 
 </p>
-- FÃ¶rsamling (Assembly)<p>
+- Cases - newly reported last 7 days per 100000 of population<p>
 
 </p>
-- Arkivref (Archive)<p
+- Cases in last 1 hour<p
 
 ></p>
-- Sida (Ref Page)<p>
-   <p>
+-Deaths-Culmunative Total<p>
+
+</p>
+- Deaths per 100000 of Population<p>
+
+</p>
+- Deaths - newly Reported last 7 days<p>
+
+</p>
+- Deaths - newly reported last 7 days per 100000 of population<p>
+
+</p>
+- Deaths in last 1 hour<p
+
+></p>
+  </p>
+ <h2>DATA CLEANING AND ANALYSIS</h2> 
+              <p>
+                <p>
+                  The Data Set did not require any Cleaning
+                </p>
+                <img src="assets/img/covid excel.png" class="img-fluid" alt="">
+              </div>
+          <p><h2>DATA VISUALIZATION</h2></p>
+            <p>
+              I uploaded the dataset to tableau desktop which I used for Analysis and visualization .<p>
+                The(KPIs) were calculated using the Tableau measures Values. The formulars used are as follows:
+              </p>
+            </p>
+
+            <p>
+              -Cases=sum(-Cases-Culmunative)
+            </p>
+            <p>
+              -Last 7 days = sum(cases - last 7 days)
+            </p>
+            <p>
+              -per 100000 pop= sum(cases per 100000 of population)
+            </p>
+            <p><p>.
+      <div>
     </p>
-                DATA CLEANING AND ANALYSIS
-                <p>
-                  <p>
-                    The dataset given was in Swedish Language, and for smooth and easy analysis, I started by translating this from Swedish to English.
-                  </p>
-                  <img src="assets/img/powerbi/k3.webp" class="img-fluid" alt="">
-                </div><p>
-                  I copied the given data from the excel file, opened Google Sheets and pasted the data. After copying, I moved to the next empty column and typed in the function to translate the document.
-                </p>
-                <p>Note that: Source Language — Swedish and the Target Language — English. These are represented as “sv” and “en” respectively while translating using Google Sheets.</p>
-                <p>
-                  Hence, the function: =GOOGLE TRANSLATE(reference_cell, “sv”,”en”) was used to translate the document from Swedish to English.
-                </p>
-                <img src="assets/img/powerbi/k6.webp" class="img-fluid" alt="">
-              </div><p>
-                And hence, a translated version of the data was obtained.
-              </p>
-              <img src="assets/img/powerbi/k5.webp" class="img-fluid" alt="">
-            </div><p>
-
-            </p>I created several other Columns like “Month Name”, “Day Name”, and a conditional Column named “Age Categories”. To categorize the ages into groups, I used a conditional column.<p>
-
+              <h2>FINDINGS</h2>
             </p>
-                 
-                <p>If Age ≤ 18- Children</p>
-                
-                <p>Age ≤ 40-Young Adults</p>
-                
-                <p>Age ≤ 59- Middle Aged </p>
-                
-                <p>Age > 60-Elderly</p>
-                
-                </p>
-              <p>
-                More columns were inserted to populate months and days in order to determine the trend of occurrence across different time frames. This was done by highlighting the column that contained the date of death, and selecting the date button. The name of day, and name of month was then obtained.
-              </p>
-              <img src="assets/img/powerbi/k7.webp" class="img-fluid" alt="">
-            </div><p>
-              <img src="assets/img/powerbi/k2.webp" class="img-fluid" alt="">
-            </div>
+      <p><img src="assets/img/cases by country.png" class="img-fluid" alt=""></p>
+            <p>
+              -<h3>United States (103,436,829) and China(99,320,286) are the Countries with the highest Number of cases</h3>
             </p>
-            <p>DATA VISUALIZATION</p>
-              <p>
-                after data Transformation with power query Editor, I uploaded the dataset to tableau dextop which i used for this visualization .<p>
-                  The(KPIs) were calculated using the Tableau measures. The formulars used are as follows:
-                </p>
-              </p>
-
-              <p>
-                -Total No. Cases = COUNT(cholera)
-              </p>
-              <p>
-                -Total # of Adults = COUNT(if [Age]> 17 then 1 END)
-              </p>
-              <p>
-                -Total # of Children = COUNT(if [Age] < 17 then 1 END)
-              </p>
-              <p>
-                -Total# of Males = COUNT(if CONTAINS([Gender],"M") then 1 END)
-              </p>
-              <p>
-                -Total# of females = COUNT(if CONTAINS([Gender],"F") then 1 END)
-              </p>
-              <p>
-                FINDINGS
-              </p>
-              <p>
-                -248 cases were recorded with a total of 130 female deaths and 118 male deaths. Hence, more Females died as a result of cholera outbreak in Stockholm, Sweden than Males
-              </p>
-              <p>
-                - The outbreak of took place within a period of 4 months: August, September, October and November with the highest death recorded in September(183) and the least death recorded in November(11).
-              </p>
-              
-              <p>
-                - Children, house wives,enemployed and retiree were most were affected among all the proffession by this outbreak.
-              </p>
-              <p>
-                -Middle aged with 85 deaths and young adults with 81 death have the highest number of deaths
-              </p>
-              <p>
-               Thanks
-              </p>
+            <p><img src="assets/img/death by country.png" class="img-fluid" alt="">
+              <h3>- united State and Brazil Hold the record of the highest Number of deaths.</h3>
+            </p>
+            
+            <p><img src="assets/img/cases per 10000 by region.png" class="img-fluid" alt="">
+              - <p><h3>Europe and the Americas Are the WHO Regions with the most cases per 100000 of population</h3></p>
+            </p>
+            <p><img src="assets/img/Africa.png" class="img-fluid" alt="">
+              <h3>- African, Eastern Mediterarnean and South East Asian countries  are the countries hit the least by the pandemic</h3>
+            </p>
+            <p>
+             Thanks
+            </p>
 
             </div>
-          </div>
 
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="portfolio-info">
-              <h3>Cholera Outbreak, Stockholm, 1853</h3>
-              <ul>
-                <li><strong>Category</strong> Tableau Project</li>
-                  <li><strong>Project URL</strong> <a href="https://public.tableau.com/app/profile/karo.onoriose/viz/KoleraoutbreakDashboard/Dashboard1">Tableau Public </a></li>
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-info">
+                <h3>Cholera Outbreak, Stockholm, 1853</h3>
+                <ul>
+                  <li><strong>Category</strong> Tableau Project</li>
+                  <li><strong>Project URL</strong> <a href="https://public.tableau.com/app/profile/karo.onoriose/viz/WHOcovid19dashboard_17014994637960/Dashboard1">Tableau Public </a></li>
                   <li><a href="https://github.com/karomajesty" class="btn-visit align-self-start">Visit Github</a></li>
-                  <li><a href="https://public.tableau.com/app/profile/karo.onoriose/vizzes" class="btn-visit align-self-start">More tableau projects </a></li>
-              </ul>
+                  <li><a href="https://public.tableau.com/app/profile/karo.onoriose/vizzes" class="btn-visit align-self-start">More tableau projects</a></li>
+                </ul>
+              </div>
             </div>
+  
+          </div>
+  
+        </div>
           </div>
 
-        </div>
 
-      </div>
 
     </section><!-- /Portfolio Details Section -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><!-- End Section Title -->
+    
+          <div class="container" data-aos="fade" data-aos-delay="100">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+              </div>
+    
+    
+    
+        </section><!-- /Contact Section -->
 
   </main>
 
@@ -246,8 +262,8 @@
       <p></p>
       <div class="social-links d-flex justify-content-center">
 
-        <a href=""><i class="bi bi-github"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/karomajesty"><i class="bi bi-github"></i></a>
+        <a href="http://www.linkedin.com/in/karo-onoriose-a95128244"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
