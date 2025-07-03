@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Shark Attack Analysis</title>
+  <meta content="An interactive Power BI dashboard analyzing historical shark attack data, trends, and victim information." name="description">
+  <meta content="Power BI, Data Analysis, Shark Attacks, Data Cleaning, Data Transformation, Dashboard, Marine Biology" name="keywords">
+
+  <link href="assets/img/DSC_1913.JPG" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Power BI Project</li>
+          </ol>
+        </nav>
+        <h1>Shark Attack Analysis Dashboard</h1>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div style="max-width: 100%; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe title="sharks" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiOTNiMzlkZmUtOTM5My00N2E2LWI4MTYtNTdjOGIzYTBhZGI5IiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" frameborder="0" allowFullScreen="true" style="position: absolute; top: 0; left: 0; border: none;"></iframe>
+          </div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Understanding Shark Attack Trends: A Data-Driven Approach</h2>
+
+              <p>
+                This Power BI dashboard provides an in-depth analysis of reported shark attacks over the past 100 years. It includes various details such as location, activity during the attack, victim information (name, gender, age), and shark species involved. My aim was to transform raw, messy data into clear, interactive visualizations to uncover trends and patterns in shark attack incidents.
+              </p>
+
+              <h4>Project Overview & Analytical Goals</h4>
+              <p>
+                The primary objective of this project was to explore historical shark attack data to identify key trends and insights. I focused on addressing questions such as:
+              </p>
+              <ul>
+                <li>What are the annual trends in shark attacks since 1900?</li>
+                <li>Which countries report the most shark attacks? Within those countries, which areas and locations seem to be the most dangerous?</li>
+                <li>What body parts are most often injured?</li>
+                <li>Are shark attacks more common during certain parts of the day?</li>
+                <li>Which species of sharks are most often involved in attacks?</li>
+              </ul>
+
+              <h4>Data Source</h4>
+              <p>
+                The dataset used for this analysis comprises reported shark attacks over the past 100 years. This raw data required significant cleaning and transformation before analysis could be performed.
+              </p>
+
+              <h4>Methodology</h4>
+              <ol>
+                <li>
+                  <strong>Data Cleaning and Transformation:</strong> The raw data for shark attacks was highly uncleaned and required extensive preparation in Power Query. This involved loading the data, promoting headers, and performing initial data type conversions. Significant effort was put into handling missing values by replacing them with "No data" for text fields and "0" or a default age for numerical fields. Dates were standardized and cleaned, and new columns were derived to categorize data points like "Fatal (Yes/No)," "Specie name" (grouping similar shark species), "Body part" (from injury descriptions), and "Time of day" (from attack times). Redundant columns were removed, and rows identified as hoaxes or containing invalid year/date data were filtered out to ensure the dataset's accuracy and readiness for analysis.
+                </li>
+                <li>
+                  <strong>DAX Calculations:</strong> Key measures were created to quantify total cases, fatalities, and survivors.
+                </li>
+                <li>
+                  <strong>Interactive Dashboard Design:</strong> I designed a Power BI dashboard featuring:
+                  <ul>
+                    <li>Total Cases: 5565</li>
+                    <li>Total Fatalities: 1370</li>
+                    <li>Total Survivors: 4195</li>
+                    <li>A trend graph showing shark attacks annually since 1900.</li>
+                    <li>A breakdown of cases by time of day, showing Afternoon with the highest number of cases (around 1000).</li>
+                    <li>A chart indicating cases and fatality by city, with Florida having the highest cases at 978.</li>
+                    <li>Analysis of body parts most often injured, with "Lower limb" being the most frequent.</li>
+                    <li>Identification of shark species with the most attacks, with "White shark" leading (around 400 cases).</li>
+                    <li>A map highlighting countries with the most shark attacks.</li>
+                  </ul>
+                </li>
+              </ol>
+
+              <h4>Key Findings & Insights</h4>
+              <ul>
+                <li>The trend of shark attacks shows fluctuations over the years, with a notable increase in recent decades.</li>
+                <li>The Afternoon period has the highest incidence of shark attacks.</li>
+                <li>Geographically, Florida and New South Wales in Australia are identified as regions with a high number of shark attacks.</li>
+                <li>The Lower limb is the most commonly injured body part during shark encounters.</li>
+                <li>The White shark is implicated in the highest number of attacks among identified species.</li>
+              </ul>
+
+              <h4>Project Impact & Value Proposition</h4>
+              <p>
+                This project showcases my data cleaning and visualization skills, especially when dealing with raw and unstructured data. It provides valuable insights for:
+              </p>
+              <ul>
+                <li>Public Safety: Informing swimmers and surfers about higher-risk times and locations.</li>
+                <li>Marine Conservation: Understanding species behavior in relation to human encounters.</li>
+                <li>Research: Providing a foundational analysis for further academic or ecological studies on shark attacks.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Data Cleaning, Data Visualization, Marine Biology Analysis</li>
+                <li><strong>Client</strong> Self-Initiated Project</li>
+                <li><strong>Project Date</strong> 2024</li>
+                <li><strong>Project URL</strong> <a href="https://app.powerbi.com/view?r=eyJrIjoiOTNiMzlkZmUtOTM5My00N2E2LWI4MTYtNTdjOGIzYTBhZGI5IiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" target="_blank">View Live Dashboard</a></li>
+                <li><a href="https://app.powerbi.com/view?r=eyJrIjoiOTNiMzlkZmUtOTM5My00N2E2LWI4MTYtNTdjOGIzYTBhZGI5IiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" class="btn-visit align-self-start" target="_blank">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section></main>
+
+    </section><section id="contact" class="contact section">
+
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><div class="container" data-aos="fade" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div></div>
+
+            </div>
+
+        </section><footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p>Data Analyst.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/your-github-profile" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

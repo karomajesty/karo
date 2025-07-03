@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>US Births Analysis</title>
+  <meta content="An interactive Power BI dashboard analyzing US birth data from 2016 to 2021, including trends by year, age of mother, education level, state, and birth weight." name="description">
+  <meta content="Power BI, Data Analysis, US Births, Demographics, Birth Trends, Public Health, Data Visualization" name="keywords">
+
+  <link href="assets/img/DSC_1913.JPG" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Power BI Project</li>
+          </ol>
+        </nav>
+        <h1>US Births Analysis Dashboard</h1>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div style="max-width: 100%; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe title="us births analysis" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiY2ExYzA5ZTktZGQxNy00NzI2LTgzZmYtOTZkNDg5YjIyNDY3IiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" frameborder="0" allowFullScreen="true" style="position: absolute; top: 0; left: 0; border: none;"></iframe>
+          </div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Exploring US Birth Trends: 2016-2021</h2>
+
+              <p>
+                This interactive Power BI dashboard provides a comprehensive analysis of birth data in the United States from 2016 to 2021. It visualizes key demographic trends, including the total number of births, gender distribution, maternal age groups, educational attainment of mothers, geographical distribution of births by state, and trends in birth weight. The aim was to transform raw birth statistics into actionable insights for public health and policy analysis.
+              </p>
+
+              <h4>Project Overview & Analytical Goals</h4>
+              <p>
+                The primary objective of this project was to analyze US birth data to identify significant patterns and shifts over a five-year period. Key questions addressed include:
+              </p>
+              <ul>
+                <li>What are the annual trends in the total number of births?</li>
+                <li>How does the number of births vary by the age of the mother?</li>
+                <li>What is the distribution of births across different maternal education levels?</li>
+                <li>Which states record the highest number of births?</li>
+                <li>Are there observable trends in average birth weight over the years?</li>
+                <li>What is the male-to-female birth ratio?</li>
+              </ul>
+
+              <h4>Data Source</h4>
+              <p>
+                The dataset used for this analysis comprises aggregated US birth records spanning from 2016 to 2021. The data was prepared to provide insights into demographic and health-related aspects of births in the United States.
+              </p>
+
+              <h4>Methodology</h4>
+              <ol>
+                <li>
+                  <strong>Data Collection and Preparation:</strong>
+                  <ul>
+                      <li>Relevant birth data for the specified period (2016-2021) was sourced.</li>
+                      <li>Data was loaded into Power BI, and initial quality checks were performed.</li>
+                      <li>Columns were formatted and transformed to ensure consistency and correctness for analysis (e.g., ensuring numeric fields are correctly interpreted, categorical fields are consistent).</li>
+                      <li>No specific M-code is provided as the cleaning steps were primarily standard Power Query transformations.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>DAX Calculations:</strong> Simple measures were created to aggregate total births, total female babies, and total male babies.
+                </li>
+                <li>
+                  <strong>Interactive Dashboard Design:</strong> The Power BI dashboard was designed with several interactive visualizations:
+                  <ul>
+                    <li>Total No of births: 22,306,054</li>
+                    <li>Total No of female Babies: 10,899,358</li>
+                    <li>Total No of Male Babies: 11,406,696</li>
+                    <li>A bar chart showing the "Total No of Birth by Age of Mother," indicating a peak around age 25-30.</li>
+                    <li>A bar chart illustrating "No of Births by Education Level of Mother," showing higher birth numbers for mothers with high school diplomas or bachelor's degrees.</li>
+                    <li>A line chart displaying "Birth Trend by Year," showing a general decline in births from 2016 to 2021.</li>
+                    <li>A bar chart ranking "States by No of Births," with California, Texas, and New York as the top states.</li>
+                    <li>A line chart tracking "Birth Weight (g) Trend by Year," suggesting a slight decrease in average birth weight over the period.</li>
+                  </ul>
+                </li>
+              </ol>
+
+              <h4>Key Findings & Insights</h4>
+              <ul>
+                <li>The US experienced over 22 million births between 2016 and 2021, with a slight majority of male babies.</li>
+                <li>Birth rates show a clear downward trend from 2016 to 2021.</li>
+                <li>The highest number of births occurred among mothers aged 25-30.</li>
+                <li>Mothers with a "High school graduate" or "Bachelor's degree" education level account for the largest proportion of births.</li>
+                <li>California, Texas, and New York consistently have the highest birth numbers, reflecting their population sizes.</li>
+                <li>There is a subtle but noticeable decreasing trend in the average birth weight over the analyzed period.</li>
+              </ul>
+
+              <h4>Project Impact & Value Proposition</h4>
+              <p>
+                This project demonstrates proficiency in data visualization and demographic analysis using Power BI. The insights derived can be valuable for:
+              </p>
+              <ul>
+                <li>Public Health Officials: To understand birth trends and allocate resources for maternal and child health.</li>
+                <li>Policy Makers: To inform decisions related to family planning, education, and social services.</li>
+                <li>Researchers: To provide a foundational dataset and analysis for further demographic or sociological studies.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Data Analysis, Data Visualization, Demographics, Public Health</li>
+                <li><strong>Client</strong> Self-Initiated Project</li>
+                <li><strong>Project Date</strong> 2016 - 2021 (Data Range)</li>
+                <li><strong>Project URL</strong> <a href="https://app.powerbi.com/view?r=eyJrIjoiY2ExYzA5ZTktZGQxNy00NzI2LTgzZmYtOTZkNDg5YjIyNDY3IiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" target="_blank">View Live Dashboard</a></li>
+                <li><a href="https://app.powerbi.com/view?r=eyJrIjoiY2ExYzA5ZTktZGQxNy00NzI2LTgzZmYtOTZkNDg5YjIyNDY3IiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" class="btn-visit align-self-start" target="_blank">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section></main>
+
+    </section><section id="contact" class="contact section">
+
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><div class="container" data-aos="fade" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div></div>
+
+            </div>
+
+        </section><footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p>Data Analyst.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/your-github-profile" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

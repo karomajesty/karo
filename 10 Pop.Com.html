@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Historical Stock Price Analysis</title>
+  <meta content="An interactive Power BI dashboard analyzing historical stock prices, trading volumes, and market trends for 10 popular companies." name="description">
+  <meta content="Power BI, Data Analysis, Stock Market, Financial Analysis, Dashboard, Investment, Market Trends" name="keywords">
+
+  <link href="assets/img/DSC_1913.JPG" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Power BI Project</li>
+          </ol>
+        </nav>
+        <h1>Historical Stock Price Analysis of 10 Popular Companies</h1>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        </div>
+
+        <div style="max-width: 100%; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe title="10 companies Analysis" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiYjIzNjNiMDMtNjEzMC00NjlmLWFjNTItZjdhOWNlNWE2ZTg4IiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" frameborder="0" allowFullScreen="true" style="position: absolute; top: 0; left: 0; border: none;"></iframe>
+          </div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Unveiling Market Dynamics: A Deep Dive into Stock Performance</h2>
+
+              <p>
+                This Power BI dashboard offers an in-depth analysis of historical stock price data for 10 highly influential companies across technology and consumer sectors: Amazon, Apple, Facebook (Meta), Google (Alphabet), Microsoft, Netflix, Tesla, Uber, Walmart, and Zoom. My goal was to transform complex raw data into clear, interactive visualizations, providing valuable insights into market trends, individual company performance, and trading dynamics from 2011 to 2021.
+              </p>
+
+              <h4>Project Overview & Investment Insights</h4>
+              <p>
+                The core objective of this project was to provide a robust tool for understanding the past performance of these major companies, which can inform future investment strategies. I aimed to answer key questions such as:
+              </p>
+              <ul>
+                <li>What are the long-term price trends and volatility of these stocks?</li>
+                <li>Which companies have experienced the most significant growth or decline?</li>
+                <li>How has trading volume evolved, and what does it indicate about market interest?</li>
+                <li>What were the all-time high and low prices, and how do they compare?</li>
+                <li>Are there any discernible quarterly patterns in trading activity and average prices?</li>
+              </ul>
+
+              <h4>Data Source</h4>
+              <p>
+                The data used for this analysis comprises historical stock prices and trading volumes, collected from reliable financial data providers covering the period from 2011 to 2021. This dataset provided comprehensive daily records, including opening price, closing price, high, low, and volume for each of the selected companies.
+              </p>
+
+              <h4>Methodology</h4>
+              <ol>
+                <li>
+                  <strong>Data Collection & Aggregation:</strong> I aggregated historical daily stock data for all 10 companies, ensuring consistency across different timeframes and data points.
+                </li>
+                <li>
+                  <strong>Data Cleaning & Transformation:</strong>
+                  <ul>
+                    <li>I handled any missing values or inconsistencies, ensuring the dataset was complete and accurate.</li>
+                    <li>Dates were meticulously formatted, and stock splits were accounted for to ensure accurate price comparisons over time.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Data Modeling & Feature Engineering:</strong>
+                  <ul>
+                    <li>I built a comprehensive data model in Power BI, establishing clear relationships between company data and time dimensions.</li>
+                    <li>Crucial metrics such as Average Opening Price by Year, Total Volume Traded, All-Time High (ATH) Price, and All-Time Low (ATL) Price were calculated.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>DAX Calculations:</strong> I developed powerful Data Analysis Expressions (DAX) to create key metrics for my analysis:
+                  <ul>
+                    <li>Calculated Overall Average Stock Price, All-Time High (ATH) Price, and All-Time Low (ATL) Price.</li>
+                    <li>Derived **Total Volume Traded** and individual company volumes.</li>
+                    <li>Implemented measures for year-over-year and quarterly price and volume trends.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Interactive Dashboard Design:</strong> I designed an intuitive and visually rich Power BI dashboard, featuring:
+                  <ul>
+                    <li>Clear **KPI cards** to highlight overall average price, ATH, ATL, and total volume.</li>
+                    <li>**Line charts** to visually track opening price trends and average stock prices over the years for each company.</li>
+                    <li>**Area charts** to illustrate average stock price fluctuations over time.</li>
+                    <li>**Bar charts** for total volume traded by year and company, and quarterly performance breakdowns.</li>
+                    <li>**Scatter plots** to analyze the relationship between trading volume and price.</li>
+                    <li>Interactive filters by company and year range, allowing users to drill down into specific periods or stock performances.</li>
+                  </ul>
+                </li>
+              </ol>
+
+              <h4>Key Findings & Insights</h4>
+
+              <h5>Overall Market Snapshot</h5>
+              <ul>
+                <li><strong>Average Stock Price:</strong> Across all analyzed companies and the period, the average stock price was approximately $440.65.</li>
+                <li><strong>All-Time High (ATH) Price:</strong> The highest recorded price among these stocks was a remarkable $3,773.08.</li>
+                <li><strong>All-Time Low (ATL) Price:</strong> Conversely, the lowest recorded price was $4.22, highlighting the significant growth potential and volatility in this sector.</li>
+                <li><strong>Total Volume Traded:</strong> A massive 463 Billion in total volume was traded across all companies, indicating high liquidity and market activity.</li>
+              </ul>
+
+              <h5>Company Performance and Trends</h5>
+              <ul>
+                <li><strong>Dynamic Price Movements:</strong> The dashboard clearly shows significant upward trends for many of these tech and consumer giants, particularly in the later years of the analysis period (2018-2021). Companies like Amazon and Google demonstrated substantial opening price appreciation over the years.</li>
+                <li><strong>Leading by Trading Volume:</strong> Tesla dominated in terms of total trading volume, with approximately 243.2 Billion shares traded, far surpassing other companies. Apple followed with around 89 Billion, underscoring their high investor interest and liquidity.</li>
+                <li><strong>Diverse Performance Landscape:</strong> While some companies showed consistent growth, others like Netflix and Zoom also experienced periods of significant gains and fluctuations, reflecting the dynamic nature of the market.</li>
+              </ul>
+
+              <h5>Volume and Quarterly Analysis</h5>
+              <ul>
+                <li><strong>Surging Volume:</strong> Total trading volume generally increased year over year, with a notable acceleration from 2018 to 2021, indicating heightened market activity and investor engagement in these companies.</li>
+                <li><strong>Quarterly Consistency:</strong> Volume and average price by quarter revealed relatively consistent trading activity throughout the year, with Q4 showing the highest average price (around $481.13) and Q1 leading in volume (around 125 Billion shares).</li>
+                <li><strong>Price-Volume Relationship:</strong> The analysis suggests that periods of significant price movements often coincided with higher trading volumes, a classic indicator of strong market conviction.</li>
+              </ul>
+
+              <h4>Project Impact & Value Proposition</h4>
+              <p>
+                This project demonstrates my capability to conduct comprehensive financial data analysis and present complex information in an accessible way. This dashboard provides invaluable insights for:
+              </p>
+              <ul>
+                <li><strong>Investment Research:</strong> Aiding investors in understanding historical trends and potential future movements of popular stocks.</li>
+                <li><strong>Market Understanding:</strong> Offering a clear view of overall market sentiment and the performance of key industry players.</li>
+                <li><strong>Portfolio Management:</strong> Helping individuals or analysts track and compare the performance of companies relevant to their portfolios.</li>
+                <li><strong>Educational Tool:</strong> Serving as a practical example for students or aspiring analysts to understand real-world stock market data.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Data Visualization, Financial Analysis, Business Intelligence</li>
+                <li><strong>Client</strong> Self-Initiated Project</li>
+                <li><strong>Project Date</strong> 2024 (Analysis Period: 2011-2021)</li>
+                <li><strong>Project URL</strong> <a href="#" target="_blank">View Live Dashboard (Coming Soon)</a></li>
+                <li><a href="#" class="btn-visit align-self-start" target="_blank">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section></main>
+
+    </section><section id="contact" class="contact section">
+
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><div class="container" data-aos="fade" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div></div>
+
+            </div>
+
+        </section><footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p>Data Analyst.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/your-github-profile" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

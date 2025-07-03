@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Brazilian E-Commerce Analysis</title>
+  <meta content="An interactive Power BI dashboard analyzing Brazilian e-commerce trends, customer behavior, and delivery performance." name="description">
+  <meta content="Power BI, Data Analysis, E-commerce, Brazil, Dashboard, Customer Behavior, Sales Performance" name="keywords">
+
+  <link href="assets/img/DSC_1913.JPG" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Power BI Project</li>
+          </ol>
+        </nav>
+        <h1>Brazilian E-Commerce Analysis</h1>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        </div>
+
+        <div style="max-width: 100%; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe title="Brazilian E-Commerce Analysis" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiOGIwNTFjZWYtMzhhMy00MDJhLWI1NjQtNjM0OWYxNWZkYjQ1IiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" frameborder="0" allowFullScreen="true" style="position: absolute; top: 0; left: 0; border: none;"></iframe>
+          </div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Brazilian E-Commerce Performance: A Data-Driven Insight</h2>
+
+              <p>
+                This Power BI dashboard was built to unravel the complexities of the Brazilian e-commerce market. By transforming raw, multi-source data into clear, actionable visual insights, it helps stakeholders understand key trends, spot growth opportunities, and refine operational strategies within this dynamic sector. The project offers a comprehensive analysis of sales, customer behavior, and logistics efficiency from 2016 to 2018.
+              </p>
+
+              <h4>Project Overview & Problem Statement</h4>
+              <p>
+                The main goal of this project was to gain a clear, data-driven understanding of the Brazilian e-commerce landscape. I aimed to address several key challenges:
+              </p>
+              <ul>
+                <li><strong>Identifying Growth Trajectories:</strong> Understanding how the e-commerce market expanded year over year.</li>
+                <li><strong>Assessing Customer Satisfaction:</strong> Quantifying and visualizing customer feedback to highlight service strengths and areas needing improvement.</li>
+                <li><strong>Optimizing Logistics:</strong> Analyzing delivery performance to pinpoint bottlenecks and improve efficiency.</li>
+                <li><strong>Uncovering Market Hotspots:</strong> Pinpointing the geographical areas with the highest e-commerce activity.</li>
+                <li><strong>Tracking Financial Performance:</strong> Monitoring payment trends and the total value of transactions.</li>
+              </ul>
+
+              <h4>Data Source</h4>
+              <p>
+                My analysis uses the <strong>Brazilian Olist E-Commerce Public Dataset</strong>, which is freely available on Kaggle. This extensive dataset covers orders, customers, sellers, products, payments, reviews, and geolocation information from September 2016 to October 2018.
+              </p>
+
+              <h4>Methodology</h4>
+              <ol>
+                <li>
+                  <strong>Data Acquisition & Understanding:</strong> I started by sourcing and thoroughly understanding the various tables within the Olist dataset, including customers, orders, order items, products, sellers, payments, reviews, and geolocation data.
+                </li>
+                <li>
+                  <strong>Data Cleaning & Transformation:</strong>
+                  <ul>
+                    <li>I handled missing values and inconsistencies across the tables.</li>
+                    <li>Where necessary, I converted data types, especially for date columns.</li>
+                    <li>I identified and removed any duplicate entries to ensure the data was accurate and reliable.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Data Modeling (Star Schema Design):</strong>
+                  <ul>
+                    <li>I created a robust data model in Power BI, establishing clear relationships between all relevant tables (e.g., connecting orders to customers, sellers, and order details).</li>
+                    <li>I designed a star schema, centralizing core facts like orders and linking them to dimension tables such as customers, sellers, products, and time.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>DAX Calculations:</strong> I developed powerful Data Analysis Expressions (DAX) to create key metrics for my analysis:
+                  <ul>
+                    <li>Calculated <strong>Total Orders</strong>, <strong>Total Customers</strong>, <strong>Total Sellers</strong>, and <strong>Total Payments Value</strong>.</li>
+                    <li>Derived percentages for review scores and insights into customer demographics.</li>
+                    <li>Implemented measures to analyze order growth rates and the efficiency of deliveries.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Interactive Dashboard Design:</strong> I designed an intuitive and visually appealing Power BI dashboard featuring:
+                  <ul>
+                    <li>KPI cards for quick performance monitoring at a glance.</li>
+                    <li>Line charts to visualize trends over time for orders, payments, and delivery status.</li>
+                    <li>Bar charts to compare performance across different categories like review scores and top cities.</li>
+                    <li>Donut charts for clear proportional breakdowns, such as review score distribution.</li>
+                    <li>Interactive filters and slicers that allow users to perform dynamic, deep-dive analysis.</li>
+                  </ul>
+                </li>
+              </ol>
+
+              <h4>Key Findings & Insights</h4>
+
+              <h5>Market & Customer Overview</h5>
+              <ul>
+                <li><strong>Total Sellers:</strong> My analysis included data from <strong>3,095 unique sellers</strong>, showcasing a diverse and active vendor landscape.</li>
+                <li><strong>Total Orders Processed:</strong> I analyzed a substantial <strong>96,475 transactions</strong>, providing a rich foundation for my insights.</li>
+                <li><strong>Total Unique Customers:</strong> Insights were drawn from the engagement of <strong>96,096 distinct customers</strong>, highlighting broad market participation.</li>
+                <li><strong>Total Payments Value:</strong> The platform generated over <strong>$16.01 Million (BRL)</strong> in total transaction value, underscoring significant market activity and financial flow.</li>
+              </ul>
+
+              <h5>Growth and Operational Efficiency</h5>
+              <ul>
+                <li><strong>Exponential Order Growth:</strong> The dashboard clearly shows a dramatic increase in total orders, climbing from <strong>minimal activity in 2016</strong> to a strong <strong>51,000 orders in 2018</strong>. This trend powerfully demonstrates the rapid expansion of e-commerce in Brazil.
+                  <ul>
+                    <li><strong>2016:</strong> Early market phase with low order volume.</li>
+                    <li><strong>2017:</strong> A significant leap to <strong>39,000 orders</strong>.</li>
+                    <li><strong>2018:</strong> Continued strong growth, reaching <strong>51,000 orders</strong>.</li>
+                  </ul>
+                </li>
+                <li><strong>Delivery Performance:</strong> While early deliveries consistently grew with order volume, late deliveries also increased. This points to logistics as a key area for ongoing optimization to keep customer satisfaction high as the market scales.</li>
+              </ul>
+
+              <h5>Customer Satisfaction Analysis</h5>
+              <ul>
+                <li><strong>Predominantly Positive Feedback:</strong> The distribution of review scores strongly indicates high customer satisfaction. <strong>Score 5 reviews (57,328 reviews / 57.73%)</strong> formed the vast majority, reflecting excellent service quality.
+                  <ul>
+                    <li><strong>Score 4:</strong> Also very strong, making up <strong>19.29% (19,141 reviews)</strong>.</li>
+                    <li><strong>Score 1:</strong> Representing <strong>11.5% (11,424 reviews)</strong>, this segment identifies specific areas where focused attention could significantly improve the customer experience.</li>
+                  </ul>
+                </li>
+                <li><strong>"Silent" Satisfaction:</strong> My analysis revealed that a large number of high ratings (<strong>37K Score 5 reviews</strong> and <strong>13K Score 4 reviews</strong>) came from customers who didn't leave a written message. This suggests that the user experience is intuitive and satisfying even without explicit feedback.</li>
+              </ul>
+
+              <h5>Geographic Market Performance</h5>
+              <ul>
+                <li><strong>São Paulo Dominance:</strong> <strong>São Paulo</strong> clearly stands out as the main hub for Brazilian e-commerce, leading significantly in both total orders (around <strong>16K</strong>) and total customers (around <strong>15K</strong>). This highlights its crucial role as a primary market.</li>
+                <li><strong>Key Urban Markets:</strong> Following São Paulo, major cities like <strong>Rio de Janeiro</strong> (around <strong>7K orders/customers</strong>), <strong>Belo Horizonte</strong> (around <strong>3K orders/customers</strong>), and <strong>Brasilia</strong> (around <strong>2K orders/customers</strong>) are identified as important drivers of e-commerce activity.
+                  <em>(<strong>Note:</strong> A category labeled 'Blank' accounting for ~3K orders/customers suggests an opportunity to enrich the data with more complete geographical information.)</em>
+                </li>
+              </ul>
+
+              <h5>Financial Performance Trends</h5>
+              <ul>
+                <li><strong>Surging Payment Value:</strong> The total payment value directly mirrors the overall market growth, showing healthy and expanding financial flow within the e-commerce sector throughout the analyzed period.
+                  <ul>
+                    <li><strong>2016:</strong> The initial phase, reflecting minimal payment value.</li>
+                    <li><strong>2017:</strong> Strong growth, reaching <strong>$4.1 Million</strong> in payments.</li>
+                    <li><strong>2018:</strong> Continued acceleration, with payments growing to <strong>$8.9 Million</strong>.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h4>Project Impact & Value Proposition</h4>
+              <p>
+                This project showcases my ability to transform complex raw data into clear, actionable strategic insights. This dashboard provides valuable tools for businesses to:
+              </p>
+              <ul>
+                <li><strong>Monitor Market Trajectory:</strong> Accurately track and anticipate e-commerce growth patterns.</li>
+                <li><strong>Enhance Customer Experience:</strong> Pinpoint specific areas for service refinement based on detailed review analysis.</li>
+                <li><strong>Optimize Operations:</strong> Strategically improve logistics and delivery efficiency by understanding trends in early versus late deliveries.</li>
+                <li><strong>Drive Targeted Growth:</strong> Precisely identify and focus resources on high-potential geographic markets.</li>
+                <li><strong>Inform Business Decisions:</strong> Build a clear, data-driven foundation for effective marketing campaigns, product development, and strategic expansion.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Data Visualization, Business Intelligence</li>
+                <li><strong>Client</strong> Self-Initiated Project</li>
+                <li><strong>Project Date</strong> 2024 (Analysis Period: 2016-2018)</li>
+                <li><strong>Project URL</strong> <a href="#" target="_blank">View Live Dashboard (Coming Soon)</a></li>
+                <li><a href="#" class="btn-visit align-self-start" target="_blank">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section></main>
+
+    </section><section id="contact" class="contact section">
+
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><div class="container" data-aos="fade" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div></div>
+
+            </div>
+
+        </section><footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p>Data Analyst.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/your-github-profile" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

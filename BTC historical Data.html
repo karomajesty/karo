@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bitcoin Historical Data Analysis</title>
+  <meta content="An interactive Power BI dashboard analyzing historical Bitcoin price and volume data from 2012 to 2021, exploring trends, trade volumes, and price fluctuations." name="description">
+  <meta content="Power BI, Data Analysis, Bitcoin, Cryptocurrency, Historical Data, Price Trend, Volume Analysis, Blockchain" name="keywords">
+
+  <link href="assets/img/DSC_1913.JPG" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Power BI Project</li>
+          </ol>
+        </nav>
+        <h1>Bitcoin Historical Data Analysis</h1>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div style="max-width: 100%; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe title="BtcHD Analyisis" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiMjVmYjFmMDgtNWE2YS00ZTkyLWE2OWItMzgxMjQ3YjZmNWQxIiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" frameborder="0" allowFullScreen="true" style="position: absolute; top: 0; left: 0; border: none;"></iframe>
+          </div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Analyzing Bitcoin's Journey: Price and Volume Trends (2012-2021)</h2>
+
+              <p>
+                This Power BI dashboard offers a detailed historical analysis of Bitcoin's performance from 2012 to early 2021. It provides insights into total trading volumes (both in USD and BTC), the number of trades, and significant price fluctuations including the lowest, highest, and weighted average prices. The dashboard aims to visualize Bitcoin's growth, volatility, and trading activity over time.
+              </p>
+
+              <h4>Project Overview & Analytical Goals</h4>
+              <p>
+                The primary objective of this project was to explore Bitcoin's historical data to uncover key trends and patterns for cryptocurrency enthusiasts and market analysts. I focused on addressing questions such as:
+              </p>
+              <ul>
+                <li>What are the overall trading volumes and number of trades for Bitcoin over the analyzed period?</li>
+                <li>How has Bitcoin's price trended annually, from its lowest points to its highest peaks?</li>
+                <li>Are there specific years or quarters where trading volume saw significant increases or decreases?</li>
+                <li>What were the lowest and highest prices Bitcoin reached each year?</li>
+                <li>How does total trading volume distribute across different quarters?</li>
+              </ul>
+
+              <h4>Data Source</h4>
+              <p>
+                The dataset used for this analysis comprises historical price and volume data for Bitcoin, covering the period from January 2012 to March 2021.
+              </p>
+
+              <h4>Methodology</h4>
+              <ol>
+                <li>
+                  <strong>Data Cleaning and Transformation:</strong> The raw Bitcoin historical data underwent a series of essential cleaning and transformation steps to ensure its quality and usability for analysis. This involved loading the CSV file, promoting headers, and accurately changing initial data types for various numerical columns. Non-numeric or erroneous entries in the 'Open' column were filtered out, and the Unix timestamp was converted into a user-friendly 'Datetime' column, which was then split into separate 'Date' and 'Time' columns. Further transformations included removing the original 'Timestamp' column, filtering out specific datetime anomalies, and ensuring all financial columns ('Volume_BTC', 'Volume_Currency', 'Weighted_Price') were correctly typed as currency for precise calculations. The process concluded with renaming columns for clarity.
+                </li>
+                <li>
+                  <strong>DAX Calculations:</strong> Measures were created to summarize key metrics:
+                  <ul>
+                    <li>Total Volume ($)</li>
+                    <li>Total Volume (BTC)</li>
+                    <li>Total Trades</li>
+                    <li>Lowest Price</li>
+                    <li>Highest Price</li>
+                    <li>Weighted Price (as of the last available date)</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Interactive Dashboard Design:</strong> The Power BI dashboard was designed with several interactive visualizations:
+                  <ul>
+                    <li>Key Performance Indicators (KPIs) showing:
+                        <ul>
+                            <li>Total Volume ($): 150.92bn</li>
+                            <li>Total Volume (BTC): 33,691,974</li>
+                            <li>Total Trades: 3,613,765</li>
+                            <li>Lowest Price: 1.5</li>
+                            <li>Highest Price: 61,781.83</li>
+                            <li>Weighted Price: 61,716.2053 (as of 3/31/2021)</li>
+                        </ul>
+                    </li>
+                    <li>A bar chart illustrating "Total volume by Year," showing significant growth in trading volume over time, especially in later years.</li>
+                    <li>A pie chart for "Total Volume of trades by Quarter," highlighting which quarters have the highest trading activity.</li>
+                    <li>A line chart for "Bitcoin Trend by Year," clearly depicting the exponential price growth and market cycles.</li>
+                    <li>A bar chart comparing "Highest and Lowest Bitcoin Prices by Year," showcasing yearly price volatility.</li>
+                  </ul>
+                </li>
+              </ol>
+
+              <h4>Key Findings & Insights</h4>
+              <ul>
+                <li>Bitcoin experienced immense growth in both trading volume and price from 2012 to early 2021, with significant peaks in volume and price towards the end of the period.</li>
+                <li>The price range expanded dramatically over the years, from a low of 1.5 to a high exceeding 61,000 within the dataset's timeframe.</li>
+                <li>Trading volume by quarter often shows variations, with certain quarters exhibiting higher liquidity.</li>
+                <li>The dashboard visually confirms Bitcoin's volatile nature, characterized by sharp price increases and corrections.</li>
+              </ul>
+
+              <h4>Project Impact & Value Proposition</h4>
+              <p>
+                This project highlights my ability to analyze and visualize complex financial time-series data. It provides valuable insights for:
+              </p>
+              <ul>
+                <li>Cryptocurrency Investors: To understand historical performance, identify trends, and inform investment strategies.</li>
+                <li>Market Analysts: For studying market cycles, liquidity, and price discovery in the cryptocurrency space.</li>
+                <li>Data Enthusiasts: To explore the journey of one of the most prominent digital assets through a visual interface.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Data Analysis, Data Visualization, Cryptocurrency, Financial Analysis, Time Series</li>
+                <li><strong>Client</strong> Self-Initiated Project</li>
+                <li><strong>Project Date</strong> 2012 - 2021 (Data Range)</li>
+                <li><strong>Project URL</strong> <a href="https://app.powerbi.com/view?r=eyJrIjoiMjVmYjFmMDgtNWE2YS00ZTkyLWE2OWItMzgxMjQ3YjZmNWQxIiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" target="_blank">View Live Dashboard</a></li>
+                <li><a href="https://app.powerbi.com/view?r=eyJrIjoiMjVmYjFmMDgtNWE2YS00ZTkyLWE2OWItMzgxMjQ3YjZmNWQxIiwidCI6IjYwYmIyZTdlLWRiOWUtNDE0ZC04NWI3LTZjZjk4MjZkMjQzMSJ9" class="btn-visit align-self-start" target="_blank">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section></main>
+
+    </section><section id="contact" class="contact section">
+
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><div class="container" data-aos="fade" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div></div>
+
+            </div>
+
+        </section><footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p>Data Analyst.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/your-github-profile" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
