@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Supermarket Sales Analysis - Onoriose Karo Majesty</title>
+  <meta content="Data analysis project on supermarket store sales, daily customer count, and store area to identify key performance drivers and provide actionable insights." name="description">
+  <meta content="supermarket, sales analysis, data science, python, pandas, matplotlib, seaborn, customer count, store area, business intelligence, portfolio" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  </head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">Supermarket Sales Analysis</li>
+          </ol>
+        </nav>
+        <h1>Supermarket Store Branches Sales Analysis</h1>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="assets/img/htmap000001.png" alt="Correlation Heatmap of Supermarket Data">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/bar1.png" alt="Top 5 Stores by Sales: Sales & Customer Count Comparison">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/bar2.png" alt="Bottom 5 Stores by Sales: Sales & Customer Count Comparison">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/bar3.png" alt="Top 5 Stores by Customer Count: Sales & Customer Count Comparison">
+            </div>
+             <div class="swiper-slide">
+              <img src="assets/img/bar4.png" alt="Bottom 5 Stores by Customer Count: Sales & Customer Count Comparison">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/sp3.png" alt="Scatter Plot: Store Sales vs. Daily Customer Count">
+            </div>
+             <div class="swiper-slide">
+              <img src="assets/img/dist 1.png" alt="Distribution of Key Supermarket Metrics (Histograms)">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Project Overview & Problem Statement</h2>
+              <p>
+                This project focuses on analyzing sales data from various supermarket store branches to understand the factors influencing their performance. The primary objective was to investigate the dependence of store sales on specific attributes like store area, number of items available, and daily customer count. The ultimate goal is to identify areas for improvement and leverage successful strategies to boost overall profitability for the supermarket company.
+              </p>
+
+              <h3>Dataset</h3>
+              <p>
+                The analysis utilized the "Stores.csv" dataset, comprising 896 entries and 5 columns. Each entry represents a unique supermarket store branch, providing information on:
+              </p>
+              <ul>
+                <li><code>Store_ID</code>: Unique identifier for each store.</li>
+                <li><code>Store_Area</code>: Physical area of the store in square yards.</li>
+                <li><code>Items_Available</code>: Number of different items stocked in the store.</li>
+                <li><code>Daily_Customer_Count</code>: Average number of customers visiting the store daily over a month.</li>
+                <li><code>Store_Sales</code>: Total sales generated by the store in US dollars.</li>
+              </ul>
+              <p>
+                Initial data inspection confirmed no missing values, ensuring a clean dataset for analysis.
+              </p>
+
+              <h3>Methodology & Approach</h3>
+              <p>
+                The analysis followed a structured approach:
+              </p>
+              <ol>
+                <li><b>Data Loading & Initial Inspection:</b> Loaded the dataset and performed basic checks (<code>.head()</code>, <code>.info()</code>, <code>.describe()</code>) to understand data types, structure, and statistical summaries.</li>
+                <li><b>Correlation Analysis:</b> Calculated and visualized the correlation matrix to understand linear relationships between key numerical variables, particularly focusing on sales drivers.</li>
+                <li><b>Relationship Visualizations:</b> Generated scatter plots with regression lines to visually inspect the relationships between <code>Store_Sales</code> and <code>Store_Area</code>, <code>Items_Available</code>, and <code>Daily_Customer_Count</code>.</li>
+                <li><b>Distribution Analysis:</b> Created histograms for all key numerical features to understand their spread, central tendency, and identify outliers.</li>
+                <li><b>Performance Extremes Identification:</b> Identified and analyzed the top and bottom 10 stores based on <code>Store_Sales</code> and <code>Daily_Customer_Count</code> to pinpoint specific successes and challenges.</li>
+                <li><b>Comparative Visualizations:</b> Created dual-axis bar charts to visually compare sales and customer counts for these extreme performing stores.</li>
+              </ol>
+
+              <h3>Key Findings</h3>
+              <p>
+                The analysis yielded several crucial insights, some of which challenge common assumptions:
+              </p>
+              <ul>
+                <li><b>Weak Link Between Customer Count and Sales:</b> Our analysis consistently revealed a very weak to almost non-existent linear correlation (correlation coefficient of ~0.009) between <code>Daily_Customer_Count</code> and <code>Store_Sales</code>. This was evident in the correlation matrix, scatter plots, and the comparison of top/bottom performing stores. This is a critical finding that challenges the intuitive assumption that more customers automatically mean higher sales.</li>
+                <li><b>Limited Impact of Area/Items on Sales:</b> Both <code>Store_Area</code> and <code>Items_Available</code> showed only a very weak positive correlation with <code>Store_Sales</code> (approx. 0.097 and 0.099 respectively). This suggests that simply increasing store size or the number of items available is not a primary driver of higher sales. Notably, <code>Store_Area</code> and <code>Items_Available</code> are extremely highly correlated (~0.999), indicating that a larger area almost perfectly corresponds to more items.</li>
+                <li><b>The Prominence of Average Transaction Value:</b> The most significant finding is that the <b>average transaction value per customer</b> (how much each customer spends per visit) appears to be a far more critical determinant of sales performance than the sheer volume of daily visitors. This was evidenced by stores with low customer counts achieving high sales, and stores with high customer counts showing only average or even low sales.</li>
+                <li><b>Outlier Identification:</b> Store 40 was identified as a significant outlier with a remarkably low daily customer count (10 customers), warranting specific investigation. Conversely, some stores achieved high sales with similarly low customer numbers, indicating a unique success model.</li>
+              </ul>
+
+              <h3>Actionable Recommendations</h3>
+              <p>
+                Based on these findings, here are strategic recommendations for the supermarket company to increase profits and improve store performance:
+              </p>
+              <ol>
+                <li><b>Shift Focus from Volume to Value (for low-sales, high-customer stores):</b>
+                    <p>For stores with High Daily Customer Count but Low Sales (e.g., Store 32, Store 373), implement strategies to increase average transaction value. This could involve staff training on upselling/cross-selling, optimizing product placement for impulse buys, offering bundle deals, or loyalty programs rewarding larger purchases.</p></li>
+                <li><b>Investigate and Replicate High-Sales, Low-Customer Models:</b>
+                    <p>For stores with High Sales despite Low Daily Customer Count (e.g., Store 877, Store 888), conduct case studies to understand what makes them successful (e.g., product mix, catering to high-value segments, operational efficiencies). Identify transferable best practices to replicate elsewhere.</p></li>
+                <li><b>Address Extreme Underperformance (Store 40):</b>
+                    <p>A direct, on-site investigation into Store 40 is crucial. Determine if its exceptionally low customer count is due to data anomaly, a new store, severe operational issues, or location challenges. Develop a specific rectification plan or consider strategic alternatives.</p></li>
+                <li><b>Optimize Store Area and Item Availability (Strategic, Not Primary):</b>
+                    <p>Recognize that increasing store area or items available alone is not a primary sales driver. Focus on maximizing sales efficiency within existing spaces and inventory, avoiding unnecessary expansion, and ensuring optimal stock to meet demand without overstocking.</p></li>
+                <li><b>Focus on Marketing for Value, Not Just Volume:</b>
+                    <p>Tailor marketing efforts to attract customers who are likely to spend more, or to incentivize existing customers to increase their average basket size, rather than just focusing on increasing general footfall.</p></li>
+              </ol>
+              <p>
+                By shifting the focus from merely counting customers to understanding and enhancing the value of each customer interaction, the supermarket company can develop more targeted and effective strategies to increase its overall profitability.
+              </p>
+              <p><b>For the full code and to explore the project structure, please visit the GitHub repository.</b>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Data Analysis / Business Intelligence</li>
+                <li><strong>Client</strong> Supermarket Company (Fictional)</li>
+                <li><strong>Project date</strong> July 2025</li>
+                <li><strong>Project URL</strong> <a href="https://github.com/karomajesty/Supermarket-Stores-Analysis-with-Python" target="_blank">GitHub Repository</a></li>
+                <li><strong>Full Report</strong> <a href="[LINK TO YOUR PDF REPORT HERE]" target="_blank">Download PDF Report</a></li>
+                <li><a href="https://github.com/karomajesty/Supermarket-Stores-Analysis-with-Python/blob/main/Super%20Market%20Stores%20Analysis%20with%20Python.ipynb" class="btn-visit align-self-start" target="_blank">View Live Notebook (GitHub)</a></li>
+              </ul>
+              <h3>Tools & Technologies</h3>
+              <ul>
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>NumPy</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>Jupyter Notebook</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section></main>
+
+    </section><!-- /Portfolio Details Section -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><!-- End Section Title -->
+    
+          <div class="container" data-aos="fade" data-aos-delay="100">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+              </div>
+    
+    
+    
+        </section><!-- /Contact Section -->
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p>Data Analyst.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-github"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

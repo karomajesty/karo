@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Unicorn Companies Data Analysis - Onoriose Karo Majesty</title>
+  <meta content="Data analysis project on global unicorn companies, exploring trends in valuation, funding, industry distribution, and growth over time." name="description">
+  <meta content="unicorn companies, data analysis, data science, python, pandas, matplotlib, seaborn, valuation, funding, industry, growth, portfolio" name="keywords">
+
+  <link href="assets/img/DSC_1913.JPG" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">Unicorn Companies Analysis</li>
+          </ol>
+        </nav>
+        <h1>Unicorn Companies Data Analysis</h1>
+      </div>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+
+        <!-- Swiper/Slideshow Section -->
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="assets/img/cumulative_unicorns_over_time.png" alt="Cumulative Number of Unicorns Over Time">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/Top company by valuation.png" alt="Top 10 Unicorn Companies by Valuation">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/unicorns_by_industry.png" alt="Top 10 Industries with Unicorn Companies">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/correlation_heatmap.png" class="img-fluid" alt="Correlation Heatmap of Numerical Features">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/unicorns_joined_per_year.png" class="img-fluid" alt="Unicorns Joined Per Year">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/valuation_distribution_histogram.png" class="img-fluid" alt="Valuation Distribution Histogram">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/valuation_distribution_boxplot.png" class="img-fluid" alt="Valuation Distribution Boxplot">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/valuation_by_continent_violinplot.png" class="img-fluid" alt="Valuation by Continent Violin Plot">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/top_investors.png" class="img-fluid" alt="Top 10 Most Active Investors">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/cumulative_unicorns_over_time.png" class="img-fluid" alt="Cumulative Unicorns Over Time">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/valuation_over_time.png" class="img-fluid" alt="Average Valuation Over Time">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/valuation_industry_year_heatmap.png" class="img-fluid" alt="Valuation, Industry, and Year Heatmap">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Project Overview & Problem Statement</h2>
+              <p>
+                This project focuses on analyzing a dataset containing information on global unicorn companies (privately held startups valued at over $1 billion). The primary objective was to uncover trends, patterns, and insights related to their growth, funding, and industry distribution. The analysis aims to provide a comprehensive understanding of the characteristics that define these high-growth entities in the global business landscape.
+              </p>
+              <p><b>For the full code and to explore the project structure, please visit the GitHub repository.</b>
+              </p>
+
+              <h3>Dataset</h3>
+              <p>
+                The analysis utilized the "Unicorn_Companies.csv" dataset, comprising 1074 entries and 10 columns. Each entry represents a unique unicorn company, providing information on:
+              </p>
+              <ul>
+                <li><code>Company</code>: Name of the unicorn company.</li>
+                <li><code>Valuation</code>: Company's valuation in billions of USD.</li>
+                <li><code>Date Joined</code>: Date when the company achieved unicorn status.</li>
+                <li><code>Industry</code>: Industry sector of the company.</li>
+                <li><code>City</code>: City where the company is headquartered.</li>
+                <li><code>Country</code>: Country where the company is headquartered.</li>
+                <li><code>Continent</code>: Continent where the company is headquartered.</li>
+                <li><code>Year Founded</code>: Year the company was founded.</li>
+                <li><code>Funding</code>: Total funding received by the company in billions of USD.</li>
+                <li><code>Select Investors</code>: Key investors in the company.</li>
+              </ul>
+              <p>
+                Initial data inspection involved cleaning the 'Valuation' and 'Funding' columns to numerical formats and converting 'Date Joined' to datetime objects for time-series analysis.
+              </p>
+
+              <h3>Methodology & Approach</h3>
+              <p>
+                The analysis followed a structured approach, employing various data manipulation and visualization techniques:
+              </p>
+              <ol>
+                <li><b>Data Loading & Initial Inspection:</b> Loaded the dataset and performed initial checks to understand its structure, data types, and summary statistics.</li>
+                <li><b>Data Cleaning & Preprocessing:</b> Cleaned numerical columns like 'Valuation' and 'Funding' to ensure they were in a usable format (e.g., converting '$' and 'B' to numerical billions). Converted 'Date Joined' to datetime objects.</li>
+                <li><b>Feature Engineering:</b> Calculated 'Company Age' (Date Joined - Year Founded) and extracted 'Year Joined' for time-based analysis.</li>
+                <li><b>Correlation Analysis:</b> Calculated and visualized the correlation matrix between numerical features (Valuation, Funding, Company Age, Year Founded, Year Joined) to identify relationships.</li>
+                <li><b>Distribution Analysis:</b> Explored the distribution of key metrics such as `Company Age` and `Valuation`.</li>
+                <li><b>Geographical Distribution:</b> Analyzed the number of unicorns and their valuations across different continents and countries.</li>
+                <li><b>Industry Analysis:</b> Examined the distribution of unicorns across various industries and average funding within them.</li>
+                <li><b>Time-Series Analysis:</b> Created plots to visualize the growth of unicorns over time, including cumulative trends and average valuations.</li>
+                <li><b>Top Companies & Investors Analysis:</b> Identified and visualized the top unicorn companies by valuation and the most active investors.</li>
+              </ol>
+
+              <h3>Key Findings</h3>
+              <p>
+                The analysis yielded several crucial insights into the unicorn ecosystem, supported by the following visualizations:
+              </p>
+
+              <h4>1. Top Industries with Unicorn Companies</h4>
+              <p>
+                This bar chart illustrates the distribution of unicorn companies across the top 10 industries. It clearly shows that **Fintech** and **Internet Software & Services** are the leading sectors, housing the highest number of unicorn companies. This highlights the areas of most significant innovation and growth in the startup world.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/unicorns_by_industry.png" class="img-fluid" alt="Top 10 Industries with Unicorn Companies">
+              </div>
+
+              <h4>2. Top 10 Countries with Unicorn Companies</h4>
+              <p>
+                This bar chart displays the countries with the highest number of unicorn companies. The **United States** significantly leads, followed by **China**, underscoring their dominance in fostering high-growth startups. This geographical concentration indicates the key innovation hubs globally.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/unicorns_by_country.png" class="img-fluid" alt="Top 10 Countries with Unicorn Companies">
+              </div>
+
+              <h4>3. Number of Unicorn Companies Joined Each Year</h4>
+              <p>
+                This bar chart illustrates the funding trend over time by showing the number of companies that achieved unicorn status in each specific year. It reveals a noticeable increase in new unicorns starting around 2019, with a significant surge in 2021 and 2022, indicating a period of accelerated growth in the startup ecosystem.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/unicorns_joined_per_year.png" class="img-fluid" alt="Unicorns Joined Per Year">
+              </div>
+
+              <h4>4. Valuation Distribution Histogram</h4>
+              <p>
+                This histogram provides a clear view of the distribution of unicorn company valuations. It shows that the majority of unicorn companies are concentrated at the lower end of the valuation spectrum, particularly around the $1 billion to $5 billion mark. The long tail indicates a few companies with exceptionally high valuations, making the distribution right-skewed.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/valuation_distribution_histogram.png" class="img-fluid" alt="Valuation Distribution Histogram">
+              </div>
+
+              <h4>5. Valuation Distribution Boxplot</h4>
+              <p>
+                Complementing the histogram, this box plot further highlights the valuation distribution. It visually represents the median, quartiles, and the presence of numerous outliers on the higher end. This indicates that while the median unicorn valuation is relatively modest, a small number of companies achieve significantly larger valuations.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/valuation_distribution_boxplot.png" class="img-fluid" alt="Valuation Distribution Boxplot">
+              </div>
+
+              
+
+              <h4>6. Correlation of numerical values (Valuation,Funding,Company Age,Year Founed, Year Joined) </h4>
+              <p>
+                the most significant relationships are between funding and valuation, and the expected relationship between company age and year joined.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/correlation_heatmap.png" class="img-fluid" alt="Correlation Heatmap of Numerical Features">
+              </div>
+
+              <h4>7. Funding vs. Valuation with Regression Line (Regression Plot)</h4>
+              <p>
+                This regression plot further illustrates the positive relationship between funding and valuation, with a regression line indicating the general trend. While funding is a significant factor, the scatter of points around the line suggests that other variables also play a role in determining a company's final valuation.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/funding_valuation_regplot.png" class="img-fluid" alt="Funding vs. Valuation Regression Plot">
+              </div>
+
+              <h4>8. Average Valuation (Billion USD) of Unicorns by Industry and Year Joined (Heatmap)</h4>
+              <p>
+                This heatmap provides a detailed view of how average valuations have evolved across different industries over time. Darker shades indicate higher average valuations for specific industry-year combinations, revealing periods and sectors of exceptional growth in company value.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/valuation_industry_year_heatmap.png" class="img-fluid" alt="Valuation by Industry and Year Heatmap">
+              </div>
+
+              <h4>9. Average Funding (Billion USD) by Top 15 Industries</h4>
+              <p>
+                This bar chart ranks industries by their average funding, highlighting sectors that are more capital-intensive. It shows that Auto & Transportation and Consumer & Retail industries have the highest average funding, indicating substantial investment in these areas.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/average_funding_by_industry.png" class="img-fluid" alt="Average Funding by Industry">
+              </div>
+
+              <h4>10. Number of Unicorn Companies by Continent</h4>
+              <p>
+                This bar chart clearly shows the geographical distribution of unicorn companies. North America and Asia overwhelmingly dominate the global unicorn landscape, followed by Europe, while other continents have a much smaller share.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/unicorns_by_continent.png" class="img-fluid" alt="Unicorns by Continent">
+              </div>
+
+              <h4>11. Distribution of Company Age (Years)</h4>
+              <p>
+                This histogram illustrates how long it typically takes for companies to achieve unicorn status. The distribution is right-skewed, indicating that many companies become unicorns relatively quickly (within a few years), though a few take much longer.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/company_age_distribution.png" class="img-fluid" alt="Company Age Histogram">
+              </div>
+
+              <h4>12. Distribution of Unicorn Company Valuations by Continent (Violin Plot)</h4>
+              <p>
+                This violin plot provides a detailed view of valuation distributions across continents, showing not just the median but also the density of valuations. It highlights that while most unicorns globally are valued at the lower end, North America and Asia have a significant number of outliers with extremely high valuations.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/valuation_by_continent_violinplot.png" class="img-fluid" alt="Valuation by Continent Violin Plot">
+              </div>
+
+              <h4>13. Top 10 Most Active Investors in Unicorn Companies</h4>
+              <p>
+                This bar chart identifies the top venture capital firms and investment groups that have invested in the most unicorn companies. Firms like Accel, Andreessen Horowitz, and Tiger Global Management consistently appear at the top, signifying their profound impact on the unicorn ecosystem.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/top_investors.png" class="img-fluid" alt="Top 10 Most Active Investors">
+              </div>
+
+              <h4>14. Cumulative Number of Unicorn Companies Over Time</h4>
+              <p>
+                This line plot with data labels visually tracks the total count of unicorn companies as they emerge over the years. It clearly shows an exponential growth trend, particularly a sharp increase from 2020 to 2022, reflecting a booming period for startups achieving billion-dollar valuations.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/cumulative_unicorns_over_time.png" class="img-fluid" alt="Cumulative Unicorns Over Time">
+              </div>
+
+              <h4>15. Average Valuation (Billion USD) of Unicorn Companies Over Time</h4>
+              <p>
+                This line plot shows the average valuation of unicorn companies based on the year they joined the unicorn club. It reveals fluctuations in average valuation, with some early years showing higher averages due to fewer, but extremely high-valued, companies. The trend provides insight into the changing "size" of an average unicorn over time.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/valuation_over_time.png" class="img-fluid" alt="Average Valuation Over Time">
+              </div>
+
+              
+
+              <h4>16. Top 10 Unicorn Companies by Valuation (Billion USD)</h4>
+              <p>
+                This bar chart presents the ten most highly valued unicorn companies globally. It highlights the titans of the private startup world, with Bytedance, SpaceX, and SHEIN leading the pack, showcasing the peak valuations achieved in this ecosystem.
+              </p>
+              <div class="text-center my-4">
+                  <img src="assets/img/Top company by valuation.png" class="img-fluid" alt="Top 10 Unicorn Companies by Valuation">
+              </div>
+
+
+              <h3>Implications & Further Research</h3>
+              <p>
+                The findings underscore the dynamic and rapidly evolving nature of the global unicorn ecosystem. The concentration of unicorns in specific regions and industries, coupled with the surge in new unicorns in recent years, highlights the impact of technological advancements and investment trends. Understanding these dynamics can provide valuable insights for aspiring entrepreneurs, investors, and policymakers alike. Further research could delve deeper into factors driving the valuation spikes, the long-term success rates of unicorns, and a more granular analysis of investor portfolios to identify specific investment strategies.
+              </p>
+              
+
+              <h2>Growth Recommendations for Unicorn Companies</h2>
+              <p>Based on the analysis, here are strategic recommendations for unicorn companies to foster continued growth and success:</p>
+              <ol>
+                <li><b>1. Access Venture Capital Funds When Needed:</b>
+                  <ul>
+                    <li>Unicorn companies in regions like Africa, Oceania, and South America should actively engage with venture capitalists to explore funding opportunities for scaling their businesses. The presence of over 500 select investors supporting unicorn growth in the USA suggests a robust funding environment that can be leveraged.</li>
+                    <li>Networking with unicorn companies in countries with a high number of select investors can provide valuable insights and connections to potential investors.</li>
+                  </ul>
+                </li>
+                <li><b>2. Establishment of a Growth Culture Within the Business:</b>
+                  <ul>
+                    <li>Develop and transparently share future revenue and staffing objectives and projections with internal stakeholders to align the entire organization towards growth.</li>
+                    <li>Employ experienced professionals with relevant skills and capabilities to meet both current and future business needs, ensuring the team can support rapid expansion.</li>
+                    <li>Foster effective and open communication across all levels of management, actively working to eliminate office politics, prejudice, and bias to create a conducive work environment.</li>
+                    <li>Create and provide continuous training and advancement opportunities for staff to drive retention, as a skilled and motivated workforce is crucial for sustained growth.</li>
+                  </ul>
+                </li>
+                <li><b>3. Leverage Emerging Technology:</b>
+                  <ul>
+                    <li>Artificial Intelligence and Machine Learning can significantly help companies improve their systems and processes. Given that 46% of unicorns are in Fintech and 31.4% are in Internet Software and Services, these technologies are clearly pivotal for efficiency and innovation in leading unicorn sectors.</li>
+                  </ul>
+                </li>
+                <li><b>4. Focus on Creating the Right Strategic Objectives Per Time:</b>
+                  <ul>
+                    <li>Prioritize growing the customer base into new markets to increase revenue streams. The observed surge in unicorns in 2020 and 2022 indicates periods where market expansion was highly effective.</li>
+                    <li>Invest more in research and development to continually innovate and improve operational efficiency, ensuring long-term competitiveness.</li>
+                    <li>Actively engage in networking and forming partnerships with other unicorns. With 47.8% of unicorns in San Francisco, 32.3% in New York, and 19.9% in Beijing, these hubs offer prime opportunities for collaboration and learning best practices on growth strategies.</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Data Analysis / Business Intelligence</li>
+                <li><strong>Client</strong> Self-Project</li>
+                <li><strong>Project date</strong> Nov 2024</li>
+                <li><strong>Project URL</strong> <a href="https://github.com/karomajesty/Data-Analysis-of-Unicorn-Companies-Using-Python/blob/main/Data%20Analysis%20of%20Unicorn%20Companies%20using%20Python.ipynb" target="_blank">GitHub Repository</a></li>
+                <li><strong>Full Report</strong> <a href="https://github.com/karomajesty/Data-Analysis-of-Unicorn-Companies-Using-Python/blob/main/Data%20Analysis%20of%20Unicorn%20Companies%20using%20Python.ipynb" target="_blank">View Jupyter Notebook</a></li>
+                <li><a href="https://github.com/karomajesty/Data-Analysis-of-Unicorn-Companies-Using-Python/blob/main/Data%20Analysis%20of%20Unicorn%20Companies%20using%20Python.ipynb" class="btn-visit align-self-start" target="_blank">View Live Notebook (GitHub)</a></li>
+              </ul>
+              <h3>Tools & Technologies</h3>
+              <ul>
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>NumPy</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>Jupyter Notebook</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <section id="contact" class="contact section">
+
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p></p>
+    </div>
+    <div class="container" data-aos="fade" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Location</h3>
+              <p>Lagos, Nigeria</p>
+            </div>
+          </div>
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call me</h3>
+              <p>+(234) 916 709 1342</p>
+              <p>+(234) 802 554 5280</p>
+            </div>
+          </div>
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email me</h3>
+              <p>Onoriose1@outlook.com</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+  </section>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p>Data Analyst.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-github"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

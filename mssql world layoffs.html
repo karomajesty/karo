@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>SQL Data Cleaning Project: Global Layoffs</title>
+  <meta content="Data cleaning project using SQL on a global layoffs dataset." name="description">
+  <meta content="SQL, data cleaning, data analysis, database, layoffs, portfolio" name="keywords">
+
+  <link href="assets/img/DSC_1913.JPG" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+
+
+  </head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">SQL Project</li>
+          </ol>
+        </nav>
+        <h1>SQL Data Cleaning Project: Global Layoffs Dataset</h1>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        </div>
+
+      <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>SQL Data Cleaning Project: Global Layoffs Dataset</h2>
+
+              <p>
+                This project demonstrates my proficiency in SQL data cleaning by transforming a raw global layoffs dataset into a clean, standardized, and analysis-ready format. The process involved handling duplicates, standardizing inconsistent entries, managing missing values, and optimizing the dataset for future insights.
+              </p>
+
+              <h4>Problem Statement</h4>
+              <p>
+                The initial layoffs dataset was plagued with common data quality issues such as duplicate records, varied spellings for company names and locations, inconsistent date formats, and null values in critical columns. These issues would have severely hampered any accurate analysis. My objective was to resolve these inconsistencies to ensure data integrity and reliability.
+              </p>
+
+              <h4>Tools Used</h4>
+              <ul>
+                <li>SQL (MySQL)</li>
+                </ul>
+
+              <h4>Data Cleaning Process</h4>
+              
+              <h5>1. Removing Duplicate Records</h5>
+              <p>To ensure the uniqueness of each record and prevent skewed analytical results, I identified and removed duplicate rows. This was achieved by leveraging SQL's window functions, specifically `ROW_NUMBER()` with a `PARTITION BY` clause across all relevant columns, to assign a unique identifier to each distinct row and then deleting rows with duplicate identifiers.</p>
+              <pre><code class="language-sql">
+-- Identify and remove duplicate rows
+WITH duplicates_cte AS
+(
+    SELECT *,
+    ROW_NUMBER() OVER(
+    PARTITION BY company, location, industry, total_laid_off, percentage_laid_off, `date`, stage, country, funds_raised_millions) as row_num
+    FROM layoffs_staging
+)
+DELETE
+FROM layoffs_staging2
+WHERE row_num > 1 ;
+              </code></pre>
+
+              <h5>2. Standardizing Data Inconsistencies</h5>
+              <p>Inconsistent data entries, such as variations in company names (' Google' vs 'Google') or industry categories ('Crypto', 'Crypto Currency'), and non-standardized date formats, were addressed. I used `TRIM()` to remove leading/trailing spaces, `UPDATE` statements with `LIKE` clauses to unify categorical data, and `STR_TO_DATE()` followed by `ALTER TABLE` to convert dates to a uniform `DATE` data type.</p>
+              <pre><code class="language-sql">
+-- Trim whitespace from company names
+UPDATE layoffs_staging2
+SET company = TRIM(company);
+
+-- Standardize 'Crypto' industry variations
+UPDATE layoffs_staging2
+SET industry = 'Crypto'
+WHERE industry LIKE 'Crypto%';
+
+-- Standardize 'United States' country variations
+UPDATE layoffs_staging2
+SET country = 'United States'
+WHERE country LIKE 'United States%';
+
+-- Convert and standardize date format
+UPDATE layoffs_staging2
+SET `date` = STR_TO_DATE (`date`,'%m/%d/%Y');
+ALTER TABLE layoffs_staging2
+MODIFY COLUMN `date` DATE;
+              </code></pre>
+
+              <h5>3. Handling Missing Values</h5>
+              <p>To ensure the completeness of our dataset, particularly for the 'industry' column, I implemented a strategy to fill in missing values. By self-joining the table on the 'company' column, I was able to populate null 'industry' values for a company if a non-null industry existed for that same company in another record.</p>
+              <pre><code class="language-sql">
+-- Fill in missing industry values using self-join
+UPDATE layoffs_staging2 AS t1
+JOIN layoffs_staging2 AS t2
+    ON t1.company = t2.company
+SET t1.industry = t2.industry
+WHERE t1.industry IS NULL
+AND t2.industry IS NOT NULL;
+              </code></pre>
+
+              <h5>4. Removing Irrelevant Rows and Columns</h5>
+              <p>Finally, I removed rows that contained no relevant layoff information (where both `total_laid_off` and `percentage_laid_off` were null) as they contribute no value to analysis. Additionally, the temporary `row_num` column, used during the duplicate removal process, was dropped to finalize the cleaned dataset.</p>
+              <pre><code class="language-sql">
+-- Remove rows with no layoff data
+DELETE
+FROM layoffs_staging2
+WHERE total_laid_off IS NULL
+AND percentage_laid_off IS NULL;
+
+-- Drop the temporary row_num column
+ALTER TABLE layoffs_staging2
+DROP COLUMN row_num;
+              </code></pre>
+
+              <h4>Results & Impact</h4>
+              <p>The completion of these data cleaning steps resulted in a robust, reliable, and analysis-ready dataset. This meticulously cleaned data is now perfectly suited for exploratory data analysis, enabling accurate insights into global layoff trends, industry-specific impacts, and geographical distributions. It forms a solid foundation for any subsequent reporting, visualization, or machine learning tasks.</p>
+
+              <h4>Learnings and Takeaways</h4>
+              <p>This project significantly enhanced my understanding of common data quality issues and reinforced my ability to apply advanced SQL techniques for data manipulation. Key learnings include:</p>
+              <ul>
+                  <li>Mastering window functions for data deduplication.</li>
+                  <li>Effective use of string functions (`TRIM`, `LIKE`) for data standardization.</li>
+                  <li>Strategic application of self-joins for intelligent missing value imputation.</li>
+                  <li>The critical importance of a systematic approach to data cleaning as the foundation for reliable data analysis.</li>
+              </ul>
+
+              <h4>Next Steps</h4>
+              <p>With the data now clean, the next logical steps would involve performing in-depth Exploratory Data Analysis (EDA) to uncover patterns and trends, and building interactive dashboards using tools like Tableau or Power BI to visualize key insights for stakeholders.</p>
+
+              <p><a href="[Link to your GitHub Gist or Repo containing the full SQL script]" target="_blank" class="btn btn-primary mt-3">View Full SQL Script on GitHub</a></p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Data Cleaning</li>
+                <li><strong>Tools</strong> SQL (MySQL)</li>
+                <li><strong>Project date</strong> July 2025</li>
+                <li><strong>Project Link</strong> <a href="[Link to your GitHub Gist or Repo]" target="_blank">GitHub Repository</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section></main>
+
+    </section><section id="contact" class="contact section">
+
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><div class="container" data-aos="fade" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div></div>
+
+
+
+        </section><footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p>Data Analyst.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-github"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+
+</body>
+
+</html>

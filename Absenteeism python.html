@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Data Cleaning of Absenteeism Dataset</title>
+    <meta content="A Python project demonstrating comprehensive data cleaning techniques on an absenteeism dataset, preparing it for further analysis." name="description">
+    <meta content="Python, Data Cleaning, Data Preprocessing, Pandas, Absenteeism, Data Analysis, Jupyter Notebook" name="keywords">
+
+    <link href="assets/img/DSC_1913.JPG" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header d-flex flex-column justify-content-center">
+
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+                <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <div class="page-title" data-aos="fade">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Python Project: Data Cleaning of Absenteeism Dataset</li>
+                    </ol>
+                </nav>
+                <h1>Data Cleaning of Absenteeism Dataset</h1>
+            </div>
+        </div>
+        <section id="portfolio-details" class="portfolio-details section">
+
+            <div class="container" data-aos="fade-up">
+
+                <div style="max-width: 100%; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                        <iframe
+                            title="Data Cleaning of Absenteeism Dataset"
+                            width="100%"
+                            height="100%"
+                            src="https://nbviewer.org/github/karomajesty/data-cleaning-with-python-Absenteeism-dataset/blob/main/Data%20Cleaning%20of%20Absenteeism%20dataset.ipynb"
+                            frameborder="0"
+                            allowFullScreen="true"
+                            style="position: absolute; top: 0; left: 0; border: none;"
+                        >
+                            Your browser does not support iframes. Please view the notebook directly <a href="https://nbviewer.org/github/karomajesty/data-cleaning-with-python-Absenteeism-dataset/blob/main/Data%20Cleaning%20of%20Absenteeism%20dataset.ipynb" target="_blank">here</a>.
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="row justify-content-between gy-4 mt-4">
+
+                    <div class="col-lg-8" data-aos="fade-up">
+                        <div class="portfolio-description">
+                            <h2>Comprehensive Data Cleaning of Absenteeism Records</h2>
+
+                            <p>
+                                This project details the rigorous process of cleaning and preprocessing a real-world absenteeism dataset using Python. Effective data cleaning is a critical first step in any data analysis or machine learning workflow, ensuring the reliability and accuracy of subsequent insights. This notebook demonstrates practical techniques to handle various data inconsistencies, missing values, and prepare the dataset for predictive modeling or descriptive analysis.
+                            </p>
+
+                            <h4>Project Goals & Challenges Addressed</h4>
+                            <p>
+                                The primary objectives of this data cleaning project include:
+                            </p>
+                            <ul>
+                                <li><strong>Handling Missing Values:</strong> Identifying and appropriately addressing missing data points across various columns.</li>
+                                <li><strong>Data Type Conversion:</strong> Ensuring all columns are set to their correct data types (e.g., categorical, numerical, datetime).</li>
+                                <li><strong>Outlier Detection and Treatment:</strong> Identifying and managing extreme values that could skew analysis.</li>
+                                <li><strong>Feature Engineering:</strong> Creating new features or transforming existing ones to better suit analysis, such as categorizing reasons for absence.</li>
+                                <li><strong>Dummy Variable Creation:</strong> Preparing categorical features for machine learning models.</li>
+                                <li><strong>Normalization/Standardization:</strong> Scaling numerical features if needed for specific modeling approaches.</li>
+                            </ul>
+
+                            <h4>Methodology & Key Python Libraries</h4>
+                            <p>
+                                The cleaning process was executed step-by-step within a Jupyter Notebook, leveraging the powerful capabilities of Python's data manipulation libraries:
+                            </p>
+                            <ol>
+                                <li>
+                                    <strong>Initial Data Loading & Inspection:</strong> Loaded the `Absenteeism_data.csv` using `pandas`. Performed initial checks with `df.head()`, `df.info()`, and `df.describe()` to understand the dataset's structure and identify initial issues.
+                                </li>
+                                <li>
+                                    <strong>Handling Missing Values:</strong> Explored methods like mean imputation, median imputation, or removal of rows/columns based on the context and extent of missingness.
+                                </li>
+                                <li>
+                                    <strong>Data Type Adjustments:</strong> Converted columns like 'Date' to datetime objects and ensuring 'ID', 'Reason for Absence', etc., were treated as categorical.
+                                </li>
+                                <li>
+                                    <strong>Categorical Data Transformation:</strong> Created dummy variables for categorical features such as 'Reason for Absence', 'Month of Absence', and 'Day of the Week' using `pd.get_dummies()`.
+                                </li>
+                                <li>
+                                    <strong>Feature Creation:</strong> Engineered new features like 'Education Level' or 'Social Smoker/Drinker' from existing data to enhance the dataset's analytical potential.
+                                </li>
+                                <li>
+                                    <strong>Consistency Checks:</strong> Ensured logical consistency across related columns.
+                                </li>
+                            </ol>
+
+                            <h4>Project Impact & Value Proposition</h4>
+                            <p>
+                                This project highlights my strong foundational skills in data preparation, which is crucial for any data-driven decision-making. By meticulously cleaning the absenteeism data, it lays the groundwork for accurate insights into factors influencing employee presence, potentially leading to better HR strategies and operational efficiency. It serves as a practical example of turning raw, messy data into a clean, actionable resource.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-info">
+                            <h3>Project Information</h3>
+                            <ul>
+                                <li><strong>Category</strong> Data Cleaning, Data Preprocessing, Python, Data Analysis</li>
+                                <li><strong>Project Date</strong> May 2023</li>
+                                <li><strong>Client</strong> Self-Initiated Project</li>
+                                <li><strong>Project URL</strong> <a href="https://nbviewer.org/github/karomajesty/data-cleaning-with-python-Absenteeism-dataset/blob/main/Data%20Cleaning%20of%20Absenteeism%20dataset.ipynb" target="_blank">View Live Notebook</a></li>
+                                <li><strong>GitHub Repo</strong> <a href="https://github.com/karomajesty/data-cleaning-with-python-Absenteeism-dataset" target="_blank">View on GitHub</a></li>
+                                <li><a href="https://nbviewer.org/github/karomajesty/data-cleaning-with-python-Absenteeism-dataset/blob/main/Data%20Cleaning%20of%20Absenteeism%20dataset.ipynb" class="btn-visit align-self-start" target="_blank">View Analysis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <section id="contact" class="contact section">
+
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+        </div>
+        <div class="container" data-aos="fade" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4">
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                            <h3>Call me</h3>
+                            <p>+(234) 916 709 1342</p>
+                            <p>+(234) 802 554 5280</p>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3>Email me</h3>
+                            <p>Onoriose1@outlook.com</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <h3 class="sitename">Karo Majesty Onoriose</h3>
+            <p>Data Analyst.</p>
+            <div class="social-links d-flex justify-content-center">
+                <a href="https://github.com/your-github-profile" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+                </div>
+                <div class="credits">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

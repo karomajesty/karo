@@ -4,36 +4,25 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Covid 19 Dashboard</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>U.S. Census Data Analysis - Onoriose Karo Majesty</title>
+  <meta content="Data analysis project on U.S. Census data from 2010-2015, exploring state and county populations, geographic divisions, and key demographic insights." name="description">
+  <meta content="census, data analysis, python, pandas, matplotlib, seaborn, population, states, counties, regions, divisions, data science, portfolio" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/DSC_1913.JPG" rel="icon">
-  <link href="assets/img/DSC_1913.JPG" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-details-page">
@@ -44,9 +33,12 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#analysis"><i class="bi bi-file-earmark-text navicon"></i><span>Analysis</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
 
@@ -54,167 +46,147 @@
 
   <main class="main">
 
-    <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="container">
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Tablea Project</li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">U.S. Census Data Analysis</li>
           </ol>
         </nav>
-        <h1>Cholera Outbreak, Stockholm, 1853</h1>
+        <h1>U.S. Census Data Analysis</h1>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Portfolio Details Section -->
-    <section id="analysis" class="analysis section">
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
 
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
 
+            <div class="swiper-slide">
+              <img src="assets/img/top_10_states_by_county_count_bar_chart.png" alt="Bar chart showing top 10 states by number of counties">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/top_3_populous_states_bar_chart.png" alt="Bar chart showing top 3 most populous states based on their 3 most populous counties">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/top_10_common_county_names_bar_chart.png" alt="Bar chart showing top 10 most common county names">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/divisions_per_region_bar_chart.png" alt="Bar chart showing number of divisions per U.S. Census Region">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
         </div>
 
         <div class="row justify-content-between gy-4 mt-4">
 
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
-              <h2>Cholera Outbreak, Stockholm, 1853: Data Analysis</h2>
-              <img src="assets/img/powerbi/Cholera outbreak dashboard.png" class="img-fluid" alt="">
-            </div>
-
+              <h2>Project Overview</h2>
               <p>
-                The importance of data analysis is limitless. It is widely known to be helpful in decision making process, however, its usefulness goes beyond this.
-
-                Data Analysis is important for studying and understanding past events, identifying how past events were handled and ultimately, make important decisions that will prevent repetitions of similar events and to ensure that future performance exceed the previous ones. Analysis of past events may also be useful for documenting the details of past occurrences.
-                 <p>
-                  This analysis therefore seeks to obtain information about the outbreak of cholera in Stockholm in the year 1853.
-                 </p>
-                <p>
-                Data Source: Quantum Analytics NG</p>
-                <p>
-                  Tools Used: Microsoft Excel, Microsoft Query Editor,Tableau
-                <p>
-
-                </p>
-                Objective: To understand the occurrence, trend and gravity of cholera outbreak in Stockholm.
-                <p>
-
-                The 1853 Stockholm cholera outbreak was a severe epidemic which occurred in Stockholm, Sweden in 1853. This was an historical event which happened as a result of a waterborne disease, caused by a bacterium that led to severe diarrhea and dehydration.
-                </p>
-                <p>DATA OVERVIEW<p>
-                  <p>
-                </p>
-
-                  The Dataset used in this Analysis may be limited in several ways because it was collected in a church environment by writing. The data was put together in Saint Catherine Parish in Stockholm.</p>
-
-                  The data contained a total of 8 columns and 248 rows with each row containing information of a victim that died as a result of cholera outbreak in the community. The colums hold information about:
-                </p>
-                <P>
-                  DÃ¶dsdatum (Date of death)<p>
-                    
-                  </p>
-                </P>
-                Namn (Name)<p>
-
-                </p>
--Yrke (Profession)<p>
-
-</p>
-- KÃ¶n (Sex)<p>
-
-</p>
-- Ã…lder (Age)<p>
-
-</p>
-- FÃ¶rsamling (Assembly)<p>
-
-</p>
-- Arkivref (Archive)<p
-
-></p>
-- Sida (Ref Page)<p>
-   <p>
-    </p>
-                DATA CLEANING AND ANALYSIS
-                <p>
-                  <p>
-                    The dataset given was in Swedish Language, and for smooth and easy analysis, I started by translating this from Swedish to English.
-                  </p>
-                  <img src="assets/img/powerbi/k3.webp" class="img-fluid" alt="">
-                </div><p>
-                  I copied the given data from the excel file, opened Google Sheets and pasted the data. After copying, I moved to the next empty column and typed in the function to translate the document.
-                </p>
-                <p>Note that: Source Language — Swedish and the Target Language — English. These are represented as “sv” and “en” respectively while translating using Google Sheets.</p>
-                <p>
-                  Hence, the function: =GOOGLE TRANSLATE(reference_cell, “sv”,”en”) was used to translate the document from Swedish to English.
-                </p>
-                <img src="assets/img/powerbi/k6.webp" class="img-fluid" alt="">
-              </div><p>
-                And hence, a translated version of the data was obtained.
-              </p>
-              <img src="assets/img/powerbi/k5.webp" class="img-fluid" alt="">
-            </div><p>
-
-            </p>I created several other Columns like “Month Name”, “Day Name”, and a conditional Column named “Age Categories”. To categorize the ages into groups, I used a conditional column.<p>
-
-            </p>
-                 
-                <p>If Age ≤ 18- Children</p>
-                
-                <p>Age ≤ 40-Young Adults</p>
-                
-                <p>Age ≤ 59- Middle Aged </p>
-                
-                <p>Age > 60-Elderly</p>
-                
-                </p>
-              <p>
-                More columns were inserted to populate months and days in order to determine the trend of occurrence across different time frames. This was done by highlighting the column that contained the date of death, and selecting the date button. The name of day, and name of month was then obtained.
-              </p>
-              <img src="assets/img/powerbi/k7.webp" class="img-fluid" alt="">
-            </div><p>
-              <img src="assets/img/powerbi/k2.webp" class="img-fluid" alt="">
-            </div>
-            </p>
-            <p>DATA VISUALIZATION</p>
-              <p>
-                after data Transformation with power query Editor, I uploaded the dataset to tableau dextop which i used for this visualization .<p>
-                  The(KPIs) were calculated using the Tableau measures. The formulars used are as follows:
-                </p>
+                This project involved a comprehensive analysis of U.S. Census data from 2010 to 2015, focusing on population estimates and geographic classifications across states and counties. The goal was to extract key insights by answering specific analytical questions and visualizing the findings to gain a clearer understanding of demographic and geographic patterns.
               </p>
 
+              <h3>Problem Statement</h3>
+              <p>The analysis aimed to answer the following key questions from the U.S. Census dataset:</p>
+              <ol>
+                <li>Which state has the most counties in it? (hint: consider the sumlevel key carefully! You'll need this for future questions too.)</li>
+                <li>Only looking at the three most populous counties for each state, what are the three most populous states (in order of highest population to lowest population)? Use CENSUS2010POP</li>
+                <li>Which city has the most counties in it?</li>
+                <li>Which region has the most division in it?</li>
+              </ol>
+
+              <h3>Dataset</h3>
               <p>
-                -Total No. Cases = COUNT(cholera)
+                The analysis utilized the "census.csv" dataset, which contains population data for counties and states across the U.S. from 2010 to 2015. Key variables used included:
               </p>
+              <ul>
+                <li><code>SUMLEV</code>: Geographic summary level (40 for states, 50 for counties).</li>
+                <li><code>STNAME</code>: State name.</li>
+                <li><code>CTYNAME</code>: County name.</li>
+                <li><code>CENSUS2010POP</code>: Population count from the 2010 Census.</li>
+                <li><code>REGION</code>: Census Region code.</li>
+                <li><code>DIVISION</code>: Census Division code.</li>
+              </ul>
               <p>
-                -Total # of Adults = COUNT(if [Age]> 17 then 1 END)
+                The dataset allowed for granular analysis at both state and county levels, providing a rich source of information for demographic insights.
               </p>
+
+              <h3>Methodology & Approach</h3>
               <p>
-                -Total # of Children = COUNT(if [Age] < 17 then 1 END)
+                The analysis followed a structured approach using Python and its data science libraries:
               </p>
+              <ol>
+                <li><strong>Data Loading & Initial Inspection:</strong> Loaded the `census.csv` dataset into a Pandas DataFrame and performed initial inspections to understand its structure, columns, and data types.</li>
+                <li><strong>Data Filtering:</strong> Applied filters based on `SUMLEV` to differentiate between state-level (SUMLEV=40) and county-level (SUMLEV=50) data for targeted analysis.</li>
+                <li><strong>Aggregations & Calculations:</strong> Utilized `groupby()` and aggregation functions (e.g., `nunique()`, `sum()`, `nlargest()`) to answer specific questions about county counts, population sums, and geographic divisions.</li>
+                <li><strong>Data Visualization:</strong> Employed Matplotlib and Seaborn to create various bar charts that visually represent the key findings, making complex data easily digestible.</li>
+                <li><strong>Interpretation of Ambiguous Questions:</strong> Carefully interpreted questions, like "Which city has the most counties in it?", considering the dataset's `CTYNAME` field represents counties, and explained the chosen interpretation.</li>
+              </ol>
+
+              <h3>Key Findings</h3>
+              <p>The analysis yielded several key insights corresponding to the problem statement:</p>
+              <ul>
+                <li><b>1. Which state has the most counties in it?</b>
+                  <ul>
+                    <li><strong>Answer:</strong> **Texas** has the highest number of counties, with **254** counties. This highlights its significant number of administrative divisions.</li>
+                  </ul>
+                </li>
+                <li><b>2. Only looking at the three most populous counties for each state, what are the three most populous states (in order of highest population to lowest population)?</b>
+                  <ul>
+                    <li><strong>Answer:</strong>
+                      <ul>
+                        <li><strong>California:</strong> 15,924,150</li>
+                        <li><strong>Texas:</strong> 8,269,632</li>
+                        <li><strong>Illinois:</strong> 6,815,061</li>
+                      </ul>
+                      This indicates that these states have extremely large population concentrations in their major urban counties.
+                    </li>
+                  </ul>
+                </li>
+                <li><b>3. Which city has the most counties in it?</b>
+                  <ul>
+                    <li><strong>Interpretation & Answer:</strong> Given the dataset's structure where `CTYNAME` refers to county names, this question was interpreted as identifying the <strong>county name string</strong> that appears most frequently across all U.S. states. The most common county name is <strong>Washington County</strong>, occurring **30** times.</li>
+                  </ul>
+                </li>
+                <li><b>4. Which region has the most divisions in it?</b>
+                  <ul>
+                    <li><strong>Answer:</strong> The **South** region has the most divisions, with **3** distinct Census divisions. Other regions (Northeast, Midwest, West) each have 2 divisions.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h3>Conclusion</h3>
               <p>
-                -Total# of Males = COUNT(if CONTAINS([Gender],"M") then 1 END)
-              </p>
-              <p>
-                -Total# of females = COUNT(if CONTAINS([Gender],"F") then 1 END)
-              </p>
-              <p>
-                FINDINGS
-              </p>
-              <p>
-                -248 cases were recorded with a total of 130 female deaths and 118 male deaths. Hence, more Females died as a result of cholera outbreak in Stockholm, Sweden than Males
-              </p>
-              <p>
-                - The outbreak of took place within a period of 4 months: August, September, October and November with the highest death recorded in September(183) and the least death recorded in November(11).
-              </p>
-              
-              <p>
-                - Children, house wives,enemployed and retiree were most were affected among all the proffession by this outbreak.
-              </p>
-              <p>
-                -Middle aged with 85 deaths and young adults with 81 death have the highest number of deaths
-              </p>
-              <p>
-               Thanks
+                This project successfully demonstrated the ability to extract, analyze, and visualize insights from a structured dataset like the U.S. Census data. By carefully segmenting the data and applying appropriate analytical methods, we were able to answer specific demographic and geographic questions, providing a clearer understanding of the U.S. population landscape.
               </p>
 
             </div>
@@ -222,12 +194,22 @@
 
           <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
-              <h3>Cholera Outbreak, Stockholm, 1853</h3>
+              <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong> Tableau Project</li>
-                  <li><strong>Project URL</strong> <a href="https://public.tableau.com/app/profile/karo.onoriose/viz/KoleraoutbreakDashboard/Dashboard1">Tableau Public </a></li>
-                  <li><a href="https://github.com/karomajesty" class="btn-visit align-self-start">Visit Github</a></li>
-                  <li><a href="https://public.tableau.com/app/profile/karo.onoriose/vizzes" class="btn-visit align-self-start">More tableau projects </a></li>
+                <li><strong>Category</strong> Data Analysis / Demographics</li>
+                <li><strong>Data Source</strong> U.S. Census Bureau</li>
+                <li><strong>Project date</strong> July 2025</li>
+                <li><strong>Project URL</strong> <a href="YOUR_GITHUB_REPO_LINK_HERE" target="_blank">GitHub Repository</a></li>
+                <li><a href="YOUR_GITHUB_REPO_LINK_HERE/blob/main/Onoriose%20Karo%20MAjesty%20(July%20Cohort%20DAF)%20CENSUS%20PROJECT%20(2).ipynb" class="btn-visit align-self-start" target="_blank">View Live Notebook (GitHub)</a></li>
+              </ul>
+              <h3>Tools & Technologies</h3>
+              <ul>
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>NumPy</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>Jupyter Notebook</li>
               </ul>
             </div>
           </div>
@@ -235,30 +217,74 @@
         </div>
 
       </div>
-
-    </section><!-- /Portfolio Details Section -->
+    </section>
 
   </main>
+
+  </section><!-- /Portfolio Details Section -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+          </div><!-- End Section Title -->
+    
+          <div class="container" data-aos="fade" data-aos-delay="100">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Location</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call me</h3>
+                    <p>+(234) 916 709 1342</p>
+                    <p>+(234) 802 554 5280</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email me</h3>
+                    <p>Onoriose1@outlook.com</p>
+                  </div>
+                </div><!-- End Info Item -->
+    
+              </div>
+    
+    
+    
+        </section><!-- /Contact Section -->
 
   <footer id="footer" class="footer position-relative light-background">
     <div class="container">
       <h3 class="sitename">Karo Majesty Onoriose</h3>
-      <p></p>
+      <p>Data Analyst.</p>
       <div class="social-links d-flex justify-content-center">
-
         <a href=""><i class="bi bi-github"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty</strong> <span>All Rights Reserved</span>
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </a>
         </div>
       </div>
     </div>
