@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Global Maritime Activity Analysis: A Day In Global Shipping</title>
+    <title>Global Maritime Activity Analysis: A One-Day Snapshot</title>
     <meta content="A comprehensive analysis of global maritime activity based on a single day's data, visualized in the 'A Day in Global Shipping' Tableau dashboard." name="description">
     <meta content="Tableau, Global Shipping, Maritime Analytics, Data Analysis, Data Visualization, Business Intelligence, Shipping Industry, Logistics" name="keywords">
 
@@ -23,7 +23,78 @@
 
     <link href="assets/css/main.css" rel="stylesheet">
 
-    <!-- Removed Tailwind CSS CDN and custom styling as per the provided sample's structure -->
+    <!-- Added Tailwind CSS for the report content styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for better readability for the embedded report */
+        .report-content {
+            font-family: 'Inter', sans-serif;
+            color: #333; /* Darker text for contrast */
+        }
+        /* Basic table styling for the embedded report */
+        .report-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for tables */
+            border-radius: 0.5rem; /* Rounded corners for tables */
+            overflow: hidden; /* Ensures rounded corners apply to content */
+        }
+        .report-content th, .report-content td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0; /* Light border for rows */
+        }
+        .report-content th {
+            background-color: #f1f5f9; /* Light grey background for table headers */
+            font-weight: 600;
+            color: #1a202c; /* Darker text for headers */
+        }
+        .report-content tr:last-child td {
+            border-bottom: none; /* No border for the last row */
+        }
+        /* Responsive adjustments for smaller screens for the embedded report tables */
+        @media (max-width: 768px) {
+            .report-content table, .report-content thead, .report-content tbody, .report-content th, .report-content td, .report-content tr {
+                display: block;
+            }
+            .report-content thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            .report-content tr {
+                margin-bottom: 1rem;
+                border: 1px solid #e2e8f0;
+                border-radius: 0.5rem;
+            }
+            .report-content td {
+                border: none;
+                border-bottom: 1px solid #e2e8f0;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+            .report-content td:before {
+                position: absolute;
+                top: 0;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+            }
+            /* Data labels for responsive tables */
+            .report-content td:nth-of-type(1):before { content: attr(data-label); }
+            .report-content td:nth-of-type(2):before { content: attr(data-label); }
+            .report-content td:nth-of-type(3):before { content: attr(data-label); }
+            .report-content td:nth-of-type(4):before { content: attr(data-label); }
+            .report-content td:nth-of-type(5):before { content: attr(data-label); }
+            .report-content td:nth-of-type(6):before { content: attr(data-label); }
+        }
+    </style>
 </head>
 
 <body class="portfolio-details-page">
@@ -34,8 +105,8 @@
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-                <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+                <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+                <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
             </ul>
         </nav>
 
@@ -51,7 +122,7 @@
                         <li class="current">Global Maritime Activity Analysis</li>
                     </ol>
                 </nav>
-                <h1>Global Maritime Activity Analysis: A Day In Global Shipping</h1>
+                <h1>Global Maritime Activity Analysis: A One-Day Snapshot</h1>
             </div>
         </div>
 
@@ -96,172 +167,172 @@
                 <div class="row justify-content-between gy-4 mt-4">
 
                     <div class="col-lg-8" data-aos="fade-up">
-                        <div class="portfolio-description">
+                        <div class="portfolio-description report-content">
                             <!-- Report Content Starts Here -->
-                            <h2>Global Maritime Activity Analysis: A Day In Global Shipping</h2>
+                            <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-indigo-700">Global Maritime Activity Analysis: A One-Day Snapshot</h1>
 
-                            <h3>1. Executive Summary</h3>
-                            <p>
+                            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-600">1. Executive Summary</h2>
+                            <p class="text-lg leading-relaxed">
                                 This report provides a comprehensive analysis of global maritime activity based on a single day's data, as visualized in the "A Day in Global Shipping" Tableau dashboard. The analysis reveals a highly dynamic global shipping landscape with significant daily vessel movements. Key findings indicate the dominance of major Asian and European ports and countries in terms of arrivals, departures, and vessel quantities. While formal ports handle the vast majority of operations, anchorages play a notable supplementary role. The data highlights critical insights for logistics planning, infrastructure development, and understanding global trade flows.
                             </p>
 
-                            <h3>2. Introduction</h3>
-                            <p>
-                                This report aims to dissect the "A Day in Global Shipping" analysis, offering a detailed analytical perspective on global maritime operations captured within a 24-hour period. Leveraging data on vessel arrivals, departures, expected arrivals, and port activities, this analysis seeks to identify key trends, highlight geographical concentrations, and provide actionable insights into the complexities of worldwide shipping. The dashboard serves as an invaluable tool for understanding the scale and distribution of maritime trade at a specific point in time.
+                            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-600">2. Introduction</h2>
+                            <p class="text-lg leading-relaxed">
+                                This report aims to dissect the "A Day in Global Shipping" Tableau dashboard, offering a detailed analytical perspective on global maritime operations captured within a 24-hour period. Leveraging data on vessel arrivals, departures, expected arrivals, and port activities, this analysis seeks to identify key trends, highlight geographical concentrations, and provide actionable insights into the complexities of worldwide shipping. The dashboard serves as an invaluable tool for understanding the scale and distribution of maritime trade at a specific point in time.
                             </p>
 
-                            <h3>3. Overview of Global Shipping Activity</h3>
-                            <p>
+                            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-600">3. Overview of Global Shipping Activity</h2>
+                            <p class="text-lg leading-relaxed mb-4">
                                 The dashboard's overview section presents a high-level snapshot of maritime traffic for the analyzed day, underscoring the immense scale of global shipping.
                             </p>
-                            <h4>Key Maritime Activity Metrics:</h4>
-                            <ul>
+                            <h3 class="text-xl font-medium mb-2">Key Maritime Activity Metrics:</h3>
+                            <ul class="list-disc list-inside text-lg leading-relaxed pl-4 mb-4">
                                 <li><strong>Arrivals (last 24hrs):</strong> 52,158 vessels</li>
                                 <li><strong>Departures (last 24hrs):</strong> 47,511 vessels</li>
                                 <li><strong>Expected Arrivals:</strong> 18,832 vessels</li>
                                 <li><strong>Vessel Quantity:</strong> 73,590 vessels</li>
                                 <li><strong>Number of Ports Monitored:</strong> 479 ports</li>
                             </ul>
-                            <p>
+                            <p class="text-lg leading-relaxed">
                                 These figures demonstrate a robust and continuous flow of maritime traffic, with a high volume of completed journeys and ongoing operations.
                             </p>
 
-                            <h3>4. Geographic Performance Analysis</h3>
-                            <p>
+                            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-600">4. Geographic Performance Analysis</h2>
+                            <p class="text-lg leading-relaxed mb-4">
                                 The data reveals significant concentrations of maritime activity in specific ports, countries, and global regions, highlighting their strategic importance in global trade.
                             </p>
-                            <h4>Top Performing Entities (by Arrivals, Expected Arrivals, and Vessel Quantity):</h4>
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
+                            <h3 class="text-xl font-medium mb-2">Top Performing Entities (by Arrivals, Expected Arrivals, and Vessel Quantity):</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-white rounded-lg">
                                     <thead>
                                         <tr>
-                                            <th>Category</th>
-                                            <th>Top 3 (by Arrivals)</th>
-                                            <th>Top 3 (by Expected Arrivals)</th>
-                                            <th>Top 3 (by Vessel Quantity)</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Category</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Top 3 (by Arrivals)</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Top 3 (by Expected Arrivals)</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Top 3 (by Vessel Quantity)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><strong>Ports</strong></td>
-                                            <td>Singapore (1,748), Shanghai (1,626), Nantong (1,287)</td>
-                                            <td>Singapore (1,205), Shanghai (644), Zhoushan (463)</td>
-                                            <td>Singapore (2,420), Shanghai (1,572), Nantong (1,529)</td>
+                                            <td data-label="Category"><strong>Ports</strong></td>
+                                            <td data-label="Top 3 (by Arrivals)">Singapore (1,748), Shanghai (1,626), Nantong (1,287)</td>
+                                            <td data-label="Top 3 (by Expected Arrivals)">Singapore (1,205), Shanghai (644), Zhoushan (463)</td>
+                                            <td data-label="Top 3 (by Vessel Quantity)">Singapore (2,420), Shanghai (1,572), Nantong (1,529)</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Countries</strong></td>
-                                            <td>China (26,714), Netherlands (3,719), Singapore (2,972)</td>
-                                            <td>China (7,534), Singapore (1,276), Korea (1,090)</td>
-                                            <td>China (34,418), USA (5,853), Netherlands (4,423)</td>
+                                            <td data-label="Category"><strong>Countries</strong></td>
+                                            <td data-label="Top 3 (by Arrivals)">China (26,714), Netherlands (3,719), Singapore (2,972)</td>
+                                            <td data-label="Top 3 (by Expected Arrivals)">China (7,534), Singapore (1,276), Korea (1,090)</td>
+                                            <td data-label="Top 3 (by Vessel Quantity)">China (34,418), USA (5,853), Netherlands (4,423)</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Global Areas</strong></td>
-                                            <td>Central China (13,853), North China (12,333), UK Coast & Atlantic (9,977)</td>
-                                            <td>Central China (3,498), North China (3,367), South China (2,058)</td>
-                                            <td>Central China (16,790), North China (11,526), South China (9,457)</td>
+                                            <td data-label="Category"><strong>Global Areas</strong></td>
+                                            <td data-label="Top 3 (by Arrivals)">Central China (13,853), North China (12,333), UK Coast & Atlantic (9,977)</td>
+                                            <td data-label="Top 3 (by Expected Arrivals)">Central China (3,498), North China (3,367), South China (2,058)</td>
+                                            <td data-label="Top 3 (by Vessel Quantity)">Central China (16,790), North China (11,526), South China (9,457)</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <h4>Observations:</h4>
-                            <ul>
+                            <h3 class="text-xl font-medium mb-2 mt-4">Observations:</h3>
+                            <ul class="list-disc list-inside text-lg leading-relaxed pl-4 mb-4">
                                 <li><strong>Asian Dominance:</strong> Chinese ports (Shanghai, Nantong, Zhoushan, Ningbo) and Singapore consistently rank among the highest across all metrics, underscoring Asia's pivotal role in global manufacturing and trade.</li>
                                 <li><strong>European Hubs:</strong> The Netherlands (likely Rotterdam and Amsterdam) and the UK Coast & Atlantic region demonstrate significant activity, serving as crucial gateways for European trade.</li>
                                 <li><strong>North American Presence:</strong> The USA appears prominently in country-level rankings for expected arrivals and vessel quantity, indicating its importance in global shipping networks.</li>
                                 <li><strong>Global Distribution Map:</strong> Visually confirms high-density shipping lanes and port clusters, particularly in East Asia, Southeast Asia, and Western Europe.</li>
                             </ul>
 
-                            <h3>5. Detailed Port Operations Analysis</h3>
-                            <p>
+                            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-600">5. Detailed Port Operations Analysis</h2>
+                            <p class="text-lg leading-relaxed mb-4">
                                 The "Port Details" section provides a deeper dive into the operational characteristics of different port types and specific port activities.
                             </p>
-                            <h4>Port Type Distribution:</h4>
-                            <p>
+                            <h3 class="text-xl font-medium mb-2">Port Type Distribution:</h3>
+                            <p class="text-lg leading-relaxed mb-4">
                                 The donut charts illustrate the proportional breakdown of various metrics by port classification (Port, Anchorage, Canal, Marina):
                             </p>
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-white rounded-lg">
                                     <thead>
                                         <tr>
-                                            <th>Metric</th>
-                                            <th>Port</th>
-                                            <th>Anchorage</th>
-                                            <th>Canal</th>
-                                            <th>Marina</th>
-                                            <th>Total</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Metric</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Port</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Anchorage</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Canal</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Marina</th>
+                                            <th class="py-3 px-4 uppercase font-semibold text-sm">Total</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><strong>Number of Ports</strong></td>
-                                            <td>81%</td>
-                                            <td>14%</td>
-                                            <td>1%</td>
-                                            <td>4%</td>
-                                            <td>479</td>
+                                            <td data-label="Metric"><strong>Number of Ports</strong></td>
+                                            <td data-label="Port">81%</td>
+                                            <td data-label="Anchorage">14%</td>
+                                            <td data-label="Canal">-</td>
+                                            <td data-label="Marina">-</td>
+                                            <td data-label="Total">479</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Arrivals</strong></td>
-                                            <td>81%</td>
-                                            <td>16%</td>
-                                            <td>1%</td>
-                                            <td>4%</td>
-                                            <td>52,158</td>
+                                            <td data-label="Metric"><strong>Arrivals</strong></td>
+                                            <td data-label="Port">81%</td>
+                                            <td data-label="Anchorage">16%</td>
+                                            <td data-label="Canal">1%</td>
+                                            <td data-label="Marina">-</td>
+                                            <td data-label="Total">52,158</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Departures</strong></td>
-                                            <td>80%</td>
-                                            <td>17%</td>
-                                            <td>1%</td>
-                                            <td>2%</td>
-                                            <td>47,511</td>
+                                            <td data-label="Metric"><strong>Departures</strong></td>
+                                            <td data-label="Port">80%</td>
+                                            <td data-label="Anchorage">17%</td>
+                                            <td data-label="Canal">1%</td>
+                                            <td data-label="Marina">-</td>
+                                            <td data-label="Total">47,511</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Expected Arrivals</strong></td>
-                                            <td>94%</td>
-                                            <td>3%</td>
-                                            <td>3%</td>
-                                            <td>0%</td>
-                                            <td>18,832</td>
+                                            <td data-label="Metric"><strong>Expected Arrivals</strong></td>
+                                            <td data-label="Port">94%</td>
+                                            <td data-label="Anchorage">0%</td>
+                                            <td data-label="Canal">-</td>
+                                            <td data-label="Marina">-</td>
+                                            <td data-label="Total">18,832</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Number of Vessels</strong></td>
-                                            <td>83%</td>
-                                            <td>14%</td>
-                                            <td>2%</td>
-                                            <td>1%</td>
-                                            <td>73,590</td>
+                                            <td data-label="Metric"><strong>Number of Vessels</strong></td>
+                                            <td data-label="Port">83%</td>
+                                            <td data-label="Anchorage">14%</td>
+                                            <td data-label="Canal">-</td>
+                                            <td data-label="Marina">-</td>
+                                            <td data-label="Total">73,590</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <h4>Insights:</h4>
-                            <ul>
+                            <h3 class="text-xl font-medium mb-2 mt-4">Insights:</h3>
+                            <ul class="list-disc list-inside text-lg leading-relaxed pl-4 mb-4">
                                 <li><strong>Formal Ports are Primary:</strong> The vast majority of operations (80-94%) occur at traditional "Port" locations, reaffirming their central role in cargo and passenger handling.</li>
                                 <li><strong>Anchorage Importance:</strong> Anchorages account for a significant portion of arrivals, departures, and vessel quantities (14-17%), indicating their crucial function as staging areas or temporary holding points for vessels.</li>
                                 <li><strong>Canals' Role:</strong> Canals, though representing a small percentage (1%), are critical transit points for a portion of arrivals and departures.</li>
                                 <li><strong>Expected Arrivals Concentration:</strong> The high concentration of expected arrivals at formal ports (94%) suggests that logistical planning prioritizes direct port entry.</li>
                             </ul>
 
-                            <h4>Granular Port-Specific Data:</h4>
-                            <p>
+                            <h3 class="text-xl font-medium mb-2">Granular Port-Specific Data:</h3>
+                            <p class="text-lg leading-relaxed mb-4">
                                 The detailed table provides specific operational figures for individual ports. For example:
                             </p>
-                            <ul>
+                            <ul class="list-disc list-inside text-lg leading-relaxed pl-4 mb-4">
                                 <li><strong>Algeciras (Spain):</strong> High activity with 191 Arrivals, 202 Departures, 93 Expected Arrivals, and 71 vessels, indicating a major European hub.</li>
                                 <li><strong>Amsterdam (Netherlands):</strong> Significant traffic with 179 Arrivals, 228 Departures, 131 Expected Arrivals, and 767 vessels, highlighting its importance.</li>
                                 <li><strong>Aalborg (Denmark):</strong> Lower but consistent activity with 9 Arrivals, 22 Departures, 7 Expected Arrivals, and 52 vessels.</li>
                                 <li><strong>Abidjan (Ivory Coast):</strong> Shows activity in West Africa with 6 Arrivals, 5 Departures, 2 Expected Arrivals, and 52 vessels.</li>
                             </ul>
-                            <p>
+                            <p class="text-lg leading-relaxed mt-4">
                                 This granular data is essential for localized operational assessments and understanding specific port performance on the given day.
                             </p>
 
-                            <h3>6. Key Insights & Recommendations</h3>
-                            <p>
-                                Based on the analysis, the following key insights and recommendations emerge:
+                            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-600">6. Key Insights & Recommendations</h2>
+                            <p class="text-lg leading-relaxed mb-4">
+                                Based on the analysis of the "A Day in Global Shipping" dashboard, the following key insights and recommendations emerge:
                             </p>
-                            <ul>
+                            <ul class="list-disc list-inside text-lg leading-relaxed pl-4 mb-4">
                                 <li><strong>Strategic Port Focus:</strong> The consistent dominance of ports like Singapore, Shanghai, and Nantong necessitates continued investment in their infrastructure and operational efficiency to maintain global trade fluidity.</li>
                                 <li><strong>Regional Trade Corridors:</strong> The high activity in Central China, North China, and UK Coast & Atlantic highlights these as critical trade corridors requiring robust monitoring and potential capacity expansion.</li>
                                 <li><strong>Anchorage Management:</strong> Given the significant role of anchorages, optimizing their management and understanding their specific functions (e.g., waiting for berths, customs clearance) is crucial for overall efficiency.</li>
@@ -270,15 +341,15 @@
                                 <li><strong>Continuous Monitoring:</strong> While a one-day snapshot is insightful, continuous monitoring and trend analysis over longer periods would provide a more complete picture of seasonal variations, growth patterns, and emerging bottlenecks.</li>
                             </ul>
 
-                            <h3>7. Conclusion</h3>
-                            <p>
+                            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-600">7. Conclusion</h2>
+                            <p class="text-lg leading-relaxed">
                                 The "A Day in Global Shipping" Tableau dashboard effectively captures the dynamic and complex nature of global maritime operations. The analysis of this single-day snapshot reveals the immense volume of daily vessel movements, the critical roles of major global ports and countries, and the nuanced distribution of activities across different port types. The insights derived from this dashboard are invaluable for stakeholders seeking to understand, optimize, and strategically plan within the global shipping industry.
                             </p>
 
-                            <h3>Appendix</h3>
-                            <p>
+                            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-600">Appendix</h2>
+                            <p class="text-lg leading-relaxed">
                                 For an interactive experience and further exploration of these insights, please visit the live dashboard on Tableau Public:
-                                <a href="https://public.tableau.com/app/profile/karo.onoriose/viz/Adayinglobalshipping/Dashboard22" target="_blank">https://public.tableau.com/app/profile/karo.onoriose/viz/Adayinglobalshipping/Dashboard22</a>
+                                <a href="https://public.tableau.com/app/profile/karo.onoriose/viz/Adayinglobalshipping/Dashboard22" target="_blank" class="text-blue-600 hover:underline">https://public.tableau.com/app/profile/karo.onoriose/viz/Adayinglobalshipping/Dashboard22</a>
                             </p>
                             <!-- Report Content Ends Here -->
                         </div>
@@ -310,47 +381,6 @@
         </section>
 
     </main>
-
-    <section id="contact" class="contact section">
-
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Contact</h2>
-            <p></p>
-        </div>
-        <div class="container" data-aos="fade" data-aos-delay="100">
-
-            <div class="row gy-4">
-
-                <div class="col-lg-4">
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bi bi-geo-alt flex-shrink-0"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Lagos, Nigeria</p>
-                        </div>
-                    </div>
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bi bi-telephone flex-shrink-0"></i>
-                        <div>
-                            <h3>Call me</h3>
-                            <p>+(234) 916 709 1342</p>
-                            <p>+(234) 802 554 5280</p>
-                        </div>
-                    </div>
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                        <i class="bi bi-envelope flex-shrink-0"></i>
-                        <div>
-                            <h3>Email me</h3>
-                            <p>Onoriose1@outlook.com</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
 
     <footer id="footer" class="footer position-relative light-background">
         <div class="container">

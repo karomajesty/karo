@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>HR Analytics Dashboard Project</title>
+  <meta content="A comprehensive Power BI/Tableau dashboard for analyzing key human resources metrics, including employee demographics, departmental headcount, performance, and compensation." name="description">
+  <meta content="Power BI, Tableau, HR Analytics, Data Analysis, Human Resources, Dashboard, Data Visualization, Business Intelligence" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">HR Analytics Dashboard</li>
+          </ol>
+        </nav>
+        <h1>Human Resources Analytics Dashboard</h1>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class='tableauPlaceholder' id='viz1753109905264' style='position: relative; width: 100%; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;'>
+            <noscript>
+                <a href='#'><img alt='HR Summary ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HJ&#47;HJCXGDX84&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='path' value='shared&#47;HJCXGDX84' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HJ&#47;HJCXGDX84&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1753109905264');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width = '100%'; // Make responsive
+            vizElement.style.height = (divElement.offsetWidth * 0.55) + 'px'; // Adjust height based on width
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>HR Analytics Dashboard: A Strategic Overview of the Workforce</h2>
+
+              <h3>1. Problem Statement / Objective</h3>
+              <p>
+                The primary objective of this project was to develop a comprehensive and interactive dashboard to provide the Human Resources department with critical insights into the company's workforce. The goal was to move from static, manual reports to a dynamic tool that could answer key strategic questions:
+              </p>
+              <ul>
+                <li>What is the current composition of our workforce in terms of demographics (gender, age, education)?</li>
+                <li>How are employees distributed across different departments and locations?</li>
+                <li>What are the key trends in hiring and termination?</li>
+                <li>Is there a correlation between employee performance, age, and salary?</li>
+                <li>How can we identify high-turnover departments to implement targeted retention strategies?</li>
+              </ul>
+
+              <h3>2. Data Source(s)</h3>
+              <ul>
+                <li><strong>Source:</strong>This HR Dashboard uses a dataset generated using ChatGPT & Faker library.</li>
+                <li><strong>Size/Scope:</strong> The dataset contained over 8,000 records, with columns for Employee ID, Full Name, Gender, Age, Education Level, Department, Job Title, Hire Date, Termination Date, Salary, Location, and Performance Rating.</li>
+              </ul>
+
+              <h3>3. Methodology & Tools</h3>
+              <ul>
+                <li><strong>Tools Used:</strong> Microsoft Excel, Tableau.</li>
+                <li><strong>Key Features Utilized:</strong>
+                  <ul>
+                    <li><strong>Calculated Fields:</strong> Created key performance indicators (KPIs) like 'Active Employees', 'Hired', 'Terminated', and 'Turnover Rate'.</li>
+                    <li><strong>Interactive Filters:</strong> Implemented slicers and filters for Gender, Location, Status, and Year, allowing for dynamic data exploration.</li>
+                    <li><strong>Dashboard Design:</strong> Assembled two main views: an 'Overview' dashboard for high-level metrics and a 'Details' page for granular employee-level data.</li>
+                    <li><strong>Visualizations:</strong>
+                      <ul>
+                        <li><strong>KPI Cards:</strong> To display headline figures like 'Active Employees' (7,984), 'Hired' (8,950), and 'Terminated' (966).</li>
+                        <li><strong>Donut & Bar Charts:</strong> To visualize distributions for 'Gender', 'Departments', and 'Education & Age'.</li>
+                        <li><strong>Scatter Plot:</strong> To analyze the relationship between 'Age vs Salary', segmented by job role.</li>
+                        <li><strong>Geographic Map:</strong> To show the distribution of employees by state.</li>
+                        <li><strong>Data Table:</strong> A detailed, filterable table view of all employees.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h3>4. Key Findings & Insights</h3>
+              <ul>
+                <li><strong>Workforce Composition:</strong> The company has 7,984 active employees, with a gender distribution of 54% male and 46% female. The largest age groups are 25-34 and 35-44, indicating a mature but vibrant workforce.</li>
+                <li><strong>Departmental Dominance:</strong> The 'Operations' department is the largest by a significant margin (2,629 employees), followed by 'Sales' (1,634) and 'Customer Service' (1,489). This highlights the core operational focus of the business.</li>
+                <li><strong>High Turnover in Operations:</strong> While Operations is the largest department, it also has the highest number of terminations (289), suggesting a potential retention issue that needs further investigation.</li>
+                <li><strong>Compensation Structure:</strong> The 'Age vs Salary' scatter plot clearly shows a positive correlation: salary tends to increase with age, which typically correlates with experience. Financial Managers and IT Managers are among the highest earners.</li>
+                <li><strong>Educational Impact on Income:</strong> The 'Income' section reveals that employees with Master's and PhD degrees have a higher average salary, with a noticeable pay gap between genders at the Master's level.</li>
+                <li><strong>Centralized Workforce:</strong> A large majority of employees (70%) are based at the HQ, with the remaining 30% in branch offices.</li>
+              </ul>
+
+              <h3>5. Recommendations</h3>
+              <p>
+                Although this is a mockup dataset,Based on the key findings, the following actions are recommended to improve talent management, enhance employee retention, and ensure equitable practices:
+              </p>
+              <ul>
+                <li>
+                  <strong>Address High Turnover in Operations:</strong> Given that the Operations department has the highest number of terminations, it is critical to conduct a deep-dive analysis.
+                  <ul>
+                    <li>Implement targeted employee satisfaction surveys and hold focus groups within the department to understand sentiment and morale.</li>
+                    <li>Analyze exit interview data specifically for this department to identify common reasons for leaving (e.g., workload, management, career growth).</li>
+                    <li>Develop a tailored retention plan for Operations based on these findings.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Conduct a Pay Equity Audit:</strong> The identified pay gap between genders at the Master's degree level requires immediate attention. A formal pay equity audit should be conducted to identify and rectify any unjustified disparities, ensuring compliance with fair compensation practices and bolstering the company's commitment to diversity and inclusion.
+                </li>
+                <li>
+                  <strong>Develop Career Pathing and Leadership Programs:</strong> With a significant portion of the workforce in the 25-44 age bracket, the company should invest in clear career development paths and leadership training programs. This will help retain experienced employees and build a strong pipeline of future leaders from within.
+                </li>
+                <li>
+                  <strong>Review Workforce Centralization Strategy:</strong> While having 70% of employees at HQ may foster a strong culture, it could also limit the talent pool. It is recommended to evaluate the potential benefits of a more flexible, hybrid, or remote work model to attract diverse talent from different geographic locations.
+                </li>
+                <li>
+                  <strong>Perform Regular Compensation Benchmarking:</strong> To remain competitive, especially for high-demand roles like Financial and IT Managers, HR should conduct annual salary benchmarking against industry standards. This ensures that compensation packages are attractive enough to retain top performers.
+                </li>
+              </ul>
+
+              <h3>6. Visualizations & Dashboards</h3>
+              <p>The project consists of two interconnected dashboards designed for different levels of analysis:</p>
+              <ul>
+                <li><strong>Overview Dashboard:</strong> This page provides a high-level, strategic view of the entire organization. It features prominent KPIs, demographic breakdowns, and departmental comparisons, allowing executives and HR leaders to quickly gauge workforce health.</li>
+                <li><strong>Details Dashboard:</strong> This page offers a granular, sortable, and filterable list of every employee. It's a powerful tool for HR managers to look up specific individuals, filter by various attributes (e.g., "all female employees in the New York marketing department"), and export data for specific reports.</li>
+              </ul>
+
+              <h3>7. Impact & Results</h3>
+              <p>
+                This HR Analytics Dashboard transforms raw employee data into actionable intelligence. It empowers the HR department and company leadership to:
+              </p>
+              <ul>
+                <li>Make informed, data-driven decisions about talent management and workforce planning.</li>
+                <li>Proactively identify departments with high turnover and investigate underlying causes.</li>
+                <li>Monitor diversity and inclusion metrics related to gender and age.</li>
+                <li>Ensure compensation is competitive and aligned with experience and performance.</li>
+                <li>Streamline reporting processes, saving time and reducing the risk of manual errors.</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Business Intelligence, HR Analytics, Artificial Intelligence</li>
+                <li><strong>Client</strong> Personal Project</li>
+                <li><strong>Project Date</strong> Feb, 2025</li>
+                <li><a href="https://public.tableau.com/app/profile/karo.onoriose/viz/hrdashboard_17528730113420/HRSummary" class="btn-visit align-self-start" target="_blank">View Live Dashboard</a></li>
+              </ul>
+              <h3>Tools & Technologies</h3>
+              <ul>
+                <li>ChatGPT</li>
+                <li>Tableau</li>
+                <li>Python, Faker library</li>
+                <li>Data Visualization</li>
+                <li>Business Intelligence (BI)</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+   <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <p>Data Analyst</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/karomajesty"><i class="bi bi-github"></i></a>
+        <a href="http://www.linkedin.com/in/karo-onoriose"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
