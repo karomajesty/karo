@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>LimeCore Churn Analysis: A Data-Driven Report</title>
+    <meta content="A comprehensive analysis of customer churn data to identify key drivers and provide actionable recommendations for improving customer retention." name="description">
+    <meta content="Data Analysis, Business Intelligence, Customer Churn, Retention Strategy, Excel Dashboard, Data Visualization" name="keywords">
+
+    <!-- Pre-built CSS/JS links from the previous page to maintain consistency -->
+    <link href="assets/img/DSC_1913.JPG" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Custom styles for the Swiper slider -->
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Swiper Navigation buttons */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #4CAF50;
+        }
+
+        /* Swiper Pagination dots */
+        .swiper-pagination-bullet-active {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header d-flex flex-column justify-content-center">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+                <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-title" data-aos="fade">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">LimeCore Churn Analysis</li>
+                    </ol>
+                </nav>
+                <h1>LimeCore Churn Analysis: A Data-Driven Report</h1>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up">
+
+                <!-- The slideshow for the dashboards -->
+                <div class="swiper mySwiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <a href="assets/img/limeCore Churn Analysis 1.png" class="glightbox" data-gallery="portfolio-lightbox-limecore">
+                                <img src="assets/img/limeCore Churn Analysis 1.png" alt="LimeCore Churn Analysis Dashboard 1">
+                            </a>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <a href="assets/img/limeCore Churn Analysis 2.png" class="glightbox" data-gallery="portfolio-lightbox-limecore">
+                                <img src="assets/img/limeCore Churn Analysis 2.png" alt="LimeCore Churn Analysis Dashboard 2">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <div class="row justify-content-between gy-4 mt-4">
+
+                    <div class="col-lg-8" data-aos="fade-up">
+                        <div class="portfolio-description">
+                            <!-- Detailed Report Content -->
+
+                            <!-- Section 1. Project Overview -->
+                            <h2>1. Project Overview</h2>
+                            <p>
+                                In this project, I performed a comprehensive analysis of a bank's customer data to understand and address the critical business problem of customer churn. The goal was to identify the key factors influencing customer attrition, quantify the problem, and provide actionable, data-driven recommendations to improve customer retention and drive sustainable growth.
+                            </p>
+
+                            <!-- Section 2. The Challenge -->
+                            <h2>2. The Challenge</h2>
+                            <ul>
+                                <li><b>Who are our churned customers?</b></li>
+                                <ul>
+                                    <li>What are their age groups, credit scores, gender, geography, and card types?</li>
+                                </ul>
+                                <li><b>Is there a link between churn and satisfaction scores or complaints?</b></li>
+                                <li><b>Do customers with low product engagement tend to churn more?</b></li>
+                                <li><b>Does having a credit card or being an active member reduce churn?</b></li>
+                                <li><b>Are high earners or those with higher balances more loyal?</b></li>
+                                <li><b>What role does tenure play in churn likelihood?</b></li>
+                                <li><b>Which card types are more prone to churn?</b></li>
+                                <li><b>Are there any geographic regions with higher churn rates?</b></li>
+                                <li><b>Does churn correlate with the number of points earned or card usage?</b></li>
+                                <li><b>Can we identify a customer churn risk profile for early detection?</b></li>
+                            </ul>
+
+                            <!-- Section 3. Executive Summary -->
+                            <h2>3. Executive Summary</h2>
+                            <p>
+                                This report provides a comprehensive analysis of the customer churn dataset, identifying key performance indicators (KPIs) and the primary drivers of customer attrition. The analysis reveals a <b>churn rate of 20.38%</b>, which translates to <b>2,038 customers leaving the bank</b>. A particularly critical finding is the <b>100% churn rate for customers who have lodged a complaint</b>. The report also details how demographic, geographic, and behavioral factors contribute to this trend, offering data-driven insights for strategic intervention.
+                            </p>
+
+                            <!-- Section 4. Key Performance Indicators (KPIs) -->
+                            <h2>4. Key Performance Indicators (KPIs)</h2>
+                            <p>
+                                Based on the provided data, the overall health of the customer base is summarized by the following metrics:
+                            </p>
+                            <ul>
+                                <li><b>Total Customers:</b> The dataset contains a total of <b>10,000 customers</b>.</li>
+                                <li><b>Returned Customers:</b> A total of <b>7,962</b> customers have been retained.</li>
+                                <li><b>Churned Customers:</b> A total of <b>2,038</b> customers have exited the bank.</li>
+                                <li><b>Retention Rate:</b> The overall retention rate is <b>79.62%</b>.</li>
+                                <li><b>Churn Rate:</b> The overall churn rate is <b>20.38%</b>.</li>
+                            </ul>
+                            <p>
+                                The average characteristics of the customer base are:
+                            </p>
+                            <ul>
+                                <li><b>Average Satisfaction Score:</b> The average satisfaction score is <b>3.01</b> on a scale of 1 to 5.</li>
+                                <li><b>Average Age:</b> The average age of customers is <b>38.92</b> years.</li>
+                                <li><b>Average Tenure:</b> The average tenure of customers with the bank is <b>5.01</b> years.</li>
+                            </ul>
+
+                            <!-- Section 5. Detailed Findings & Analysis -->
+                            <h2>5. Detailed Findings & Analysis</h2>
+
+                            <li><B>Churn by Age:</B></li>
+                            <p>A higher coefficient of <b>0.50</b> suggests that age is positively correlated with the churn rate, indicating that as customers get older, their likelihood of churning increases.</p>
+
+                            <li><B>Churn by Location:</B></li>
+                            <p>
+                                <b>Germany</b> shows a significantly higher churn rate compared to Spain and France, suggesting a potential issue specific to this region.
+                            </p>
+                            <li><B>Churn by Average Balance:</B></li>
+                            <p>
+                                Customers with <b>higher average balances</b> are more likely to churn, indicating that higher-value customers may require targeted retention strategies.
+                            </p>
+
+                            <li><B>Churn by Number of Products:</B></li>
+                            <p>
+                                Lower product holdings (1-2 products) are associated with lower churn rates, while higher product holdings (3-4 products) correlate with significantly elevated churn. This trend may imply that customers with more products experience unmet needs or service issues, warranting targeted retention strategies for these segments.
+                            </p>
+
+                            <li><B>Churn by Tenure Analysis:</B></li>
+                            <p>
+                                Although the churn rate decreases modestly with longer tenure, churn remains present across all tenure levels. The slight improvement at 7+ years suggests that further incentives and loyalty programs could stabilize and reduce churn more effectively for long-standing customers.
+                            </p>
+
+                            <li><B>Churn by Satisfaction Score:</B></li>
+                            <p>
+                                The similar churn rates across satisfaction scores suggest that while satisfaction impacts churn, other factors may play a larger role. However, targeted improvements for scores 2 and 4 may help reduce churn within those segments.
+                            </p>
+
+                            <li><B>Churn by Gender:</B></li>
+                            <p>
+                                Female customers show a significantly higher churn rate than male customers (<b>25.07% vs. 16.47%</b>). This indicates a potential need for gender-specific engagement strategies to address the higher churn risk among female customers.
+                            </p>
+
+                            <li><B>Churn by Card Type Age:</B></li>
+                            <p>
+                                <b>Diamond cardholders</b> have the highest churn rate (<b>21.78%</b>), whereas <b>Gold cardholders</b> have the lowest (<b>19.26%</b>). This suggests a potential need to reassess benefits or engagement strategies for higher-tier card types to reduce churn.
+                            </p>
+
+                            <li><B>Churn by Credit Score Analysis:</B></li>
+                            <p>
+                                Customers with <b>lower credit scores</b> are more likely to churn. This relationship could imply that financial stability, as reflected by a higher credit score, may increase customer retention. Targeted strategies for customers with lower credit scores might help in reducing churn rates further.
+                            </p>
+
+                            <li><B>Churn by Complaint:</B></li>
+                            <p>
+                                This sharp contrast highlights that customers who complain are <b>highly likely to churn</b>. The data suggests that addressing complaints might significantly reduce churn rates. Further investigation into the specific nature of these complaints is warranted to develop a more robust resolution process.
+                            </p>
+
+                            <!-- Section 6. Recommendations -->
+                            <h2>6. Recommendations</h2>
+                            <ul>
+                                <li><b>Urgent Complaint Resolution Overhaul:</b> Given the <b>100% churn rate for customers who complained</b>, the bank must immediately and comprehensively restructure its complaint handling process. The new process should focus on restoring customer satisfaction and trust, not just resolving the initial issue.</li>
+                                <li><b>Targeted Retention Campaigns:</b> Develop specific retention campaigns for high-churn regions (e.g., Germany) and for customers in high-risk demographic and behavioral segments, particularly females and older customers.</li>
+                                <li><b>Proactive Credit Score Monitoring:</b> Utilize the <b>-0.44 correlation</b> to proactively identify customers with declining credit scores. Engage these customers with personalized financial guidance or tailored product offers to prevent churn.</li>
+                                <li><b>Product Portfolio Review:</b> Investigate why customers with multiple products are churning at a higher rate. This may involve simplifying product offerings, clarifying fee structures, or enhancing the value proposition for multi-product customers.</li>
+                            </ul>
+
+                            <!-- Section 7. Conclusion -->
+                            <h2>7. Conclusion</h2>
+                            <p>
+                                The analysis provides a clear picture of customer churn, demonstrating a significant churn rate and identifying a strong negative correlation between credit score and churn. By leveraging these insights, the bank can move from a reactive to a proactive churn management strategy. Implementing targeted interventions based on geography, demographics, and credit score, along with a focus on improving customer satisfaction and urgently revamping the complaint resolution process, will be key to enhancing customer retention and driving sustainable growth.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-info">
+                            <h3>Project Information</h3>
+                            <ul>
+                                <li><b>Category</b> Data Visualization, Financial Analysis</li>
+                                <li><b>Client</b> Self-Initiated Project</li>
+                                <li><b>Project Date</b> 2025</li>
+                                <li><b>Project URL</b> <a href="assets/bank churn.xlsx" target="_blank">View Workbook</a></li>
+                            </ul>
+                            <h3>Tools & Technologies</h3>
+                            <ul>
+                                <li><b>Excel</b></li>
+                                <li><b>Data Visualization</b></li>
+                                <li><b>Pivot Tables</b></li>
+                                <li><b>Business Intelligence (BI)</b></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    </section><!-- /Portfolio Details Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p></p>
+        </div><!-- End Section Title -->
+    
+        <div class="container" data-aos="fade" data-aos-delay="100">
+    
+            <div class="row gy-4">
+    
+                <div class="col-lg-4">
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Lagos, Nigeria</p>
+                        </div>
+                    </div><!-- End Info Item -->
+    
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                            <h3>Call me</h3>
+                            <p>+(234) 916 709 1342</p>
+                            <p>+(234) 802 554 5280</p>
+                        </div>
+                    </div><!-- End Info Item -->
+    
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3>Email me</h3>
+                            <p>Onoriose1@outlook.com</p>
+                        </div>
+                    </div><!-- End Info Item -->
+    
+                </div>
+    
+            </div>
+    
+        </section><!-- /Contact Section -->
+
+    </main>
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <h3 class="sitename">Karo Majesty Onoriose</h3>
+            <p>Data Analyst</p>
+            <div class="social-links d-flex justify-content-center">
+                <a href="https://github.com/karomajesty"><i class="bi bi-github"></i></a>
+                <a href="http://www.linkedin.com/in/karo-onoriose"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you've purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Swiper Initialization Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper('.mySwiper', {
+                // Optional parameters
+                loop: true,
+
+                // If you need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+
+</body>
+
+</html>
