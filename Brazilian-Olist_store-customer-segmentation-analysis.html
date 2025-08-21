@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Customer Segmentation Analysis on Olist E-commerce Data</title>
+    <meta content="A strategic data science project using the RFM model to segment customers from the Brazilian Olist e-commerce dataset, providing actionable insights for business growth." name="description">
+    <meta content="Python, Data Science, Customer Segmentation, RFM, E-commerce, Data Analysis, Olist, Pandas, Matplotlib, Seaborn" name="keywords">
+
+    <link href="assets/img/DSC_1913.JPG" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header d-flex flex-column justify-content-center">
+
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+                <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <div class="page-title" data-aos="fade">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Data Science Project: Customer Segmentation Analysis</li>
+                    </ol>
+                </nav>
+                <h1>Customer Segmentation Analysis on Brazilian E-commerce Data</h1>
+            </div>
+        </div>
+        <section id="portfolio-details" class="portfolio-details section">
+
+            <div class="container" data-aos="fade-up">
+
+                <!-- Placeholder for the main visual element. You can replace this section with an iframe, a static image of a dashboard, or a series of chart images. -->
+                <div style="max-width: 100%; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background-color: #f8f9fa; padding: 2rem; text-align: center;">
+                    <p style="font-size: 1.2rem; color: #6c757d; font-weight: 500;">
+                        The core components of the RFM customer segmentation analysis model.
+                    </p>
+                    <p class="mt-3">
+                        <strong>\<img src="assets/img/RFM-Model-1024x576.png" alt="RFM Analysis Model Visual" style="max-width: 100%; margin: 0 auto; display: block;"\></strong>
+                    </p>
+                </div>
+
+                <div class="row justify-content-between gy-4 mt-4">
+
+                    <div class="col-lg-8" data-aos="fade-up">
+                        <div class="portfolio-description">
+                            <h2 style="font-weight: 700;">From Descriptive Analysis to Strategic Segmentation</h2>
+                            <p>
+                                This report presents a strategic analysis of customer behavior on the Olist e-commerce platform. During my internship, I began with an exploratory analysis of this dataset, uncovering broad patterns in customer behavior, product categories, and order dynamics. That foundational work, showcased in a previous dashboard, was essential to my early development as a data analyst.
+                            </p>
+                            <p>
+                                However, as I progressed in my data science journey, I began to ask deeper questions: Who are the most valuable customers? Which customers are at risk of churning? Can we segment them meaningfully to drive business strategy?
+                            </p>
+                            <p>
+                                These questions led to the current project: a focused RFM (Recency, Frequency, Monetary) segmentation analysis designed to uncover actionable customer insights. The RFM model provides a robust framework for understanding customer behavior, and the resulting insights offer a clear, actionable strategy to improve retention, cultivate loyalty, and drive long-term revenue growth.
+                            </p>
+                            
+                            <hr>
+                            
+                            <h3>Summary of Key Insights</h3>
+                            <p>
+                                This analysis represents a natural evolution of my analytical capabilities—from descriptive exploration to predictive segmentation. By building on the insights from my initial dashboard, the RFM model has enabled a deeper understanding of customer behavior and provided the following strategic insights:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>From One-Off Sales to Retention Opportunity:</strong> My initial dashboard revealed a high volume of orders from a large number of customers. The RFM analysis deepened this finding by showing that a significant portion of the customer base consists of one-time buyers, highlighting a critical opportunity for <strong>nurturing and conversion</strong>.
+                                </li>
+                                <li>
+                                    <strong>From Top Cities to Targeted Campaigns:</strong> While the exploratory analysis showed a high concentration of sales in <strong>São Paulo (SP), Rio de Janeiro (RJ), and Minas Gerais (MG)</strong>, the RFM analysis reveals that these same hubs have a high proportion of <strong>"Lost Customers"</strong>. This actionable insight suggests the need for <strong>localized win-back campaigns</strong> in these specific regions.
+                                </li>
+                                <li>
+                                    <strong>From General Satisfaction to Behavioral Patterns:</strong> My initial work identified trends in product categories. The RFM analysis advances this by revealing that <strong>product preferences vary significantly by segment</strong>. For example, <strong>Our Champions</strong> gravitate toward health & beauty and sports & leisure products—these categories consistently drive high-value purchases and repeat engagement,<strong> Loyal Customers</strong> show strong preference for furniture & decor, suggesting emotional attachment and long-term satisfaction.While <strong>New Customers</strong> explore entry-level items like tech accessories and fashion items, indicating trend-driven buying behavior. This enables a more personalized and effective product strategy.
+                                </li>
+                                <li>
+                                    <strong>From Describing What Happened to What to Do Next:</strong> The RFM analysis provides a clear, actionable framework for customer management. It identifies that <strong>"At Risk"</strong> customers have the highest average monetary value, making them a prime target for reactivation efforts, and that <strong>"Champions"</strong> are ideal for loyalty programs to maintain their engagement.
+                                </li>
+                            </ul>
+                            
+                            <hr>
+                            
+                            <h3>Methodology: Building on the Foundation</h3>
+                            <p>
+                                The previous exploratory analysis provided several key takeaways, including geographic concentration, product diversity, and customer satisfaction friction points. The current RFM segmentation builds on that foundation by introducing behavioral clustering—allowing us to move from “what happened” to “what should we do next.”
+                            </p>
+                            <p>
+                                The analysis was executed through a structured, data-driven methodology to ensure the integrity of the insights.
+                            </p>
+                            <ol>
+                                <li><strong>Data Acquisition & Integration</strong>
+                                    <ul>
+                                        <li>Imported five datasets: orders, customers, items, products, and category translations.</li>
+                                        <li>Merged into a unified DataFrame for holistic customer analysis.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Data Cleaning & Preparation</strong>
+                                    <ul>
+                                        <li>Converted timestamps to datetime format.</li>
+                                        <li>Handled missing values.</li>
+                                        <li>Calculated total revenue per order.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>RFM Metric Calculation</strong>
+                                    <ul>
+                                        <li>Defined a snapshot date (one day after the last purchase).</li>
+                                        <li>Computed:</li>
+                                        <ul>
+                                            <li>Recency: Days since last purchase</li>
+                                            <li>Frequency: Number of orders</li>
+                                            <li>Monetary: Total spend</li>
+                                        </ul>
+                                    </ul>
+                                </li>
+                                <li><strong>Exploratory Data Analysis (EDA)</strong>
+                                    <ul>
+                                        <li>Visualized distributions of RFM metrics.</li>
+                                        <li>Identified skewness, outliers, and behavioral patterns.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Customer Segmentation</strong>
+                                    <ul>
+                                        <li>Assigned RFM scores using quintiles.</li>
+                                        <li>Mapped score combinations to intuitive segments:
+                                            <ul>
+                                                <li><strong>Champions:</strong> Recent, frequent, high spenders—ideal for loyalty programs</li>
+                                                <li><strong>At Risk:</strong> High historical spend but poor recency—prime for reactivation</li>
+                                                <li><strong>Lost Customers:</strong> Long inactive, low value—target with win-back campaigns</li>
+                                                <li><strong>New Customers:</strong> Recent but infrequent—need onboarding and nurturing</li>
+                                                <li><strong>Potential Loyalists:</strong> Moderate scores—ready for upselling</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Segment Profiling</strong>
+                                    <ul>
+                                        <li>Compared average RFM metrics across segments.</li>
+                                        <li>Visualized segment proportions, profiles, and behavioral clusters.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <hr>
+
+                            <h3>Data Sources & Tools</h3>
+                            <p>
+                                This project utilized several publicly available datasets from Olist and a robust set of tools for data manipulation, analysis, and visualization.
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Olist E-commerce Public Dataset:</strong> A collection of five datasets covering customer orders, product details, and geographic information, made available on Kaggle.
+                                </li>
+                                <li>
+                                    <strong>Python:</strong> The core programming language used for all data processing and modeling.
+                                </li>
+                                <li>
+                                    <strong>Pandas:</strong> Employed for data cleaning, merging, and manipulation of large datasets.
+                                </li>
+                                <li>
+                                    <strong>Matplotlib & Seaborn:</strong> Libraries used to create all the static visualizations, including histograms, bar charts, and heatmaps.
+                                </li>
+                                <li>
+                                    <strong>Jupyter Notebook:</strong> The primary environment for conducting the analysis and presenting the findings in a structured, reproducible format.
+                                </li>
+                            </ul>
+                            <hr>
+
+                            <h3>Visual Breakdown of Key Findings</h3>
+                            <p>
+                                The following visualizations were instrumental in transforming complex data into clear, strategic insights.
+                            </p>
+                            
+                            <h4>Distribution of RFM Metrics (Histograms)</h4>
+                            <div class="row align-items-start g-4 mt-3">
+                                <div class="col-lg-12">
+                                    <img src="assets/img/rfm histograms.png" class="img-fluid rounded" alt="Histograms of Recency, Frequency, and Monetary Values" style="box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                                    <ul class="mt-2">
+                                        <li><strong>Recency Insight:</strong> The distribution is heavily right-skewed, indicating that a large portion of customers made purchases a long time ago.</li>
+                                        <li>Only a small subset of customers have purchased recently, suggesting a high risk of churn across the base.</li>
+                                        <li><strong>Frequency Insight:</strong> The majority of customers placed only one order, with a sharp drop-off after that.</li>
+                                        <li>This reveals low repeat engagement and highlights the need for nurturing strategies to convert one-time buyers into loyal customers.</li>
+                                        <li><strong>Monetary Insight:</strong> Most customers spent relatively little, while a small group of high-value buyers contributed disproportionately to revenue.</li>
+                                        <li>This long-tail distribution confirms the presence of a few highly profitable customers worth prioritizing.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <h4>1. Segment Profiling</h4>
+                            <div class="row align-items-start g-4 mt-3">
+                                <div class="col-lg-12">
+                                    <h5>Average RFM Metrics per Segment</h5>
+                                    <img src="assets/img/Avg rfm metric by segments.png" class="img-fluid rounded" alt="Bar Chart of Average RFM Metrics by Segment" style="box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                                    <ul class="mt-2">
+                                        <li><strong>Insight:</strong> “At Risk” customers have the highest average monetary value, despite poor recency—indicating they were once highly engaged and worth reactivating.</li>
+                                        <li>“Champions” show strong performance across all metrics, confirming their top-tier status.</li>
+                                        <li>“Lost Customers” have high recency and low frequency/spend, signaling long-term disengagement.</li>
+                                        <li>“Potential Loyalists” and “New Customers” show moderate scores, offering growth potential if properly nurtured.</li>
+                                        <li><strong>Recommendation:</strong> Focus retention efforts on mid-tier segments with strong Frequency but declining Recency.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="col-lg-12">
+                                    <h5>Segment Distribution</h5>
+                                    <img src="assets/img/customer segment pie chart.png" class="img-fluid rounded" alt="Pie Chart of Customer Segment Proportions" style="box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                                    <ul class="mt-2">
+                                        <li><strong>Insight:</strong> “Champions” and “New Customers” make up the largest portions of the customer base.</li>
+                                        <li>“At Risk” and “Lost Customers” also represent significant shares, suggesting a large pool of previously engaged users who may be recoverable.</li>
+                                        <li>The distribution highlights both retention opportunities and the need for onboarding strategies.</li>
+                                        <li><strong>Recommendation:</strong> Prioritize marketing resources toward dominant segments while nurturing smaller, high-potential groups.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <h5>Normalized Segment Profiles</h5>
+                                    <img src="assets/img/rfm segment radial chart.png" class="img-fluid rounded" alt="Radar Chart of RFM Segment Profiles" style="box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                                    <ul class="mt-2">
+                                        <li><strong>Insight:</strong> “Champions” dominate across all normalized metrics, making them the most balanced and valuable group.</li>
+                                        <li>“Lost Customers” score lowest in every dimension, confirming their disengagement.</li>
+                                        <li>“Potential Loyalists” show moderate frequency and monetary value, indicating they’re on the verge of becoming high-value if engaged correctly.</li>
+                                        <li>“Others” display inconsistent behavior, suggesting they don’t fit neatly into any strategic category.</li>
+                                        <li><strong>Recommendation:</strong> Personalize offers and messaging based on segment-specific traits.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <h4>2. Behavioral Clustering</h4>
+                            <div class="row align-items-start g-4 mt-3">
+                                <div class="col-lg-12">
+                                    <h5>Frequency vs. Monetary by Segment</h5>
+                                    <img src="assets/img/freuency vs monetary scatte plot.png" class="img-fluid rounded" alt="Scatterplot of Frequency vs Monetary by Segment" style="box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                                    <ul class="mt-2">
+                                        <li><strong>Insight:</strong> “Champions” and “Loyal Customers” cluster in the top-right quadrant, representing high frequency and high spend.</li>
+                                        <li>“New Customers” appear in the lower-middle zone—low frequency but moderate spend—suggesting onboarding potential.</li>
+                                        <li>“Lost” and “At Risk” segments fall in the bottom-left quadrant, indicating low engagement and spend.</li>
+                                        <li>The visual separation of segments helps identify which groups are most valuable and which need re-engagement.</li>
+                                        <li><strong>Recommendation:</strong> Upsell to loyal, high-frequency buyers. Re-engage low-frequency spenders with targeted campaigns.</li>
+                                    </ul>
+                                </div>
+                            
+                                <div class="col-lg-12">
+                                    <h5>Segment Performance Across RFM Metrics</h5>
+                                    <img src="assets/img/avg rfm metrics by segments heatmap.png" class="img-fluid rounded" alt="Heatmap of Average RFM Metrics by Customer Segment" style="box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                                    <ul class="mt-2">
+                                        <li><strong>Insight:</strong> “Champions” have the lowest Recency and highest Monetary values, confirming their elite status.</li>
+                                        <li>“At Risk” customers show high Frequency and Monetary scores but poor Recency, indicating they were once valuable but haven’t purchased recently.</li>
+                                        <li>“Lost Customers” have high Recency and low Frequency/Monetary scores, suggesting long-term churn.</li>
+                                        <li>“Potential Loyalists” and “New Customers” show promising behavior with moderate scores across the board.</li>
+                                        <li>“Others” serve as a catch-all group with inconsistent performance.</li>
+                                        <li><strong>Recommendation:</strong> Deploy win-back strategies for segments with declining Recency.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <h4>3. Product & Geographic Profiling</h4>
+                            <div class="row align-items-start g-4 mt-3">
+                                <div class="col-lg-12">
+                                    <h5>Top Product Categories by Segment</h5>
+                                    <img src="assets/img/product category by segment bar chart.png" class="img-fluid rounded" alt="Bar Chart of Top Product Categories by Segment" style="box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                                    <ul class="mt-2">
+                                        <li><strong>Insight:</strong> “Champions” and “Loyal Customers” consistently purchase high-end categories like bed_bath_table, health_beauty, and furniture_decor.</li>
+                                        <li>“At Risk” and “Lost Customers” previously favored similar categories, suggesting their disengagement may be behavioral rather than preference-based.</li>
+                                        <li>“New Customers” explore entry-level categories like housewares and sports_leisure—ideal for onboarding promotions.</li>
+                                        <li>“Potential Loyalists” show interest in productivity-related categories like computers_accessories and office_furniture.</li>
+                                        <li><strong>Recommendation:</strong> Promote top-performing products and bundle niche items for cross-selling opportunities.</li>
+                                    </ul>
+                                </div>
+                            
+                                <div class="col-lg-12">
+                                    <h5>Segment Distribution Across Brazilian States</h5>
+                                    <img src="assets/img/segment by state heatmap.png" class="img-fluid rounded" alt="Heatmap of Customer Segments by Brazilian State" style="box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                                    <ul class="mt-2">
+                                        <li><strong>Insight:</strong> “Lost Customers” are heavily concentrated in São Paulo (SP), Rio de Janeiro (RJ), and Minas Gerais (MG), suggesting regional disengagement.</li>
+                                        <li>“Champions” are more evenly distributed, indicating high-value customers exist across multiple regions.</li>
+                                        <li>States with high proportions of “At Risk” or “Potential Loyalists” offer opportunities for localized re-engagement campaigns.</li>
+                                        <li>The heatmap supports regional targeting and inventory planning.</li>
+                                        <li><strong>Recommendation:</strong> Localize campaigns and inventory planning based on geographic segment strengths.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <h4>4. Time-Based Trends</h4>
+                            <div class="row align-items-start g-4 mt-3">
+                                <div class="col-lg-12">
+                                    <h5>Monthly Segment Evolution</h5>
+                                    <img src="assets/img/montly segment distribution line chart.png" class="img-fluid rounded" alt="Line Chart of Monthly Segment Distribution" style="box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+                                    <ul class="mt-2">
+                                        <li><strong>Insight:</strong> “New Customers” spike during promotional periods, confirming the impact of marketing campaigns.</li>
+                                        <li>“Lost Customers” rise when engagement drops, highlighting the need for consistent retention efforts.</li>
+                                        <li>Segment fluctuations over time reveal seasonal patterns and help evaluate campaign effectiveness.</li>
+                                        <li><strong>Recommendation:</strong> Align marketing efforts with seasonal behavior and monitor segment shifts to anticipate churn and growth.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                            
+                            <h3>Actionable Recommendations</h3>
+                            <p>
+                                By transforming raw data into strategic insights, we can implement a targeted, customer-centric action plan. These recommendations leverage the RFM segmentation to not only improve marketing effectiveness but also to build stronger, more profitable customer relationships.
+                            </p>
+                            <ol>
+                                <li>
+                                    <p><strong>Nurture and Convert One-Time Buyers:</strong> The majority of our customer base consists of one-time buyers. We must focus on moving these "New Customers" and "Potential Loyalists" up the value ladder. This can be achieved by launching a welcome campaign series that includes personalized product recommendations, a small discount on their next purchase, and a survey to better understand their needs and preferences.</p>
+                                </li>
+                                <li>
+                                    <p><strong>Re-engage At-Risk and Lost Customers:</strong> Our analysis shows that the "At Risk" segment has high historical value, making them a top priority for reactivation. Deploy a high-impact win-back campaign with exclusive offers and emotional messaging. For "Lost Customers," who are highly concentrated in key metropolitan areas, we should test geo-targeted social media campaigns and local advertising to lure them back with tailored incentives.</p>
+                                </li>
+                                <li>
+                                    <p><strong>Reward and Retain Champions:</strong> The "Champions" segment represents our most valuable customers. To maintain their loyalty and encourage advocacy, we must reward them. This can be done by launching a tiered loyalty program that offers exclusive perks like early access to sales, free shipping, and personalized bundles based on their demonstrated preference for high-end categories like 'furniture_decor' and 'health_beauty'.</p>
+                                </li>
+                                <li>
+                                    <p><strong>Localize and Personalize Marketing:</strong> The geographic and product insights show a clear need to move away from a one-size-fits-all approach. By localizing our marketing efforts to address the regional distribution of key segments and personalizing product promotions based on category preferences, we can increase campaign effectiveness and drive better results.</p>
+                                </li>
+                            </ol>
+                            <hr>
+
+                            <h3>Conclusion: From Insights to Impact</h3>
+                            <p>
+                                This project represents a natural evolution of my analytical capabilities—from descriptive exploration to predictive segmentation. By bridging the two analyses, I’ve demonstrated how foundational insights can be deepened with behavioral modeling, and how data storytelling can evolve into data strategy. Together, these projects reflect not just what I’ve learned, but how I think: always building, always refining, always looking for the next layer of insight. This analysis serves as a powerful blueprint for leveraging data to build a more resilient and profitable business.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-info">
+                            <h3>Project Information</h3>
+                            <ul>
+                                <li><strong>Category</strong> Data Analysis, Customer Segmentation, RFM Modeling</li>
+                                <li><strong>Project Date</strong> August 2024</li>
+                                <li><strong>Client</strong> Self-Initiated Project</li>
+                                <li><strong>Project URL</strong> <a href="https://github.com/karomajesty/-Customer-Segmentation-Analysis-on-Brazilian-Olist-Dataset/blob/main/Customer%20segmentation%20analysis%20on%20brazilian%20Olist%20dataset.ipynb" target="_blank">View Live Notebook</a></li>
+                                <li><strong>Related Project</strong> <a href="https://karomajesty.github.io/karo/Brazilain%20E-Commerce.html" target="_blank">View Sales Dashboard</a></li>
+                                <li><a href="https://github.com/karomajesty/-Customer-Segmentation-Analysis-on-Brazilian-Olist-Dataset" class="btn-visit align-self-start" target="_blank">View Analysis</a></li>
+                            </ul>
+                            <h3>Tools & Technologies</h3>
+                            <ul>
+                                <li>Python</li>
+                                <li>Pandas</li>
+                                <li>Matplotlib</li>
+                                <li>Seaborn</li>
+                                <li>Jupyter Notebook</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <h3 class="sitename">Karo Majesty Onoriose</h3>
+            <p>Data Analyst</p>
+            <div class="social-links d-flex justify-content-center">
+                <a href="https://github.com/karomajesty"><i class="bi bi-github"></i></a>
+                <a href="http://www.linkedin.com/in/karo-onoriose"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you've purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
