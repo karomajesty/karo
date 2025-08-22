@@ -2,233 +2,219 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Data Cleaning of Absenteeism Dataset</title>
-    <meta content="A Python project demonstrating comprehensive data cleaning techniques on an absenteeism dataset, preparing it for further analysis." name="description">
-    <meta content="Python, Data Cleaning, Data Preprocessing, Pandas, Absenteeism, Data Analysis, Jupyter Notebook" name="keywords">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Data Cleaning with Python and Pandas</title>
+  <meta content="Data cleaning and preprocessing project on an absenteeism dataset using Python and Pandas to prepare it for analysis." name="description">
+  <meta content="Python, Pandas, Data Cleaning, Data Preprocessing, Jupyter Notebook, Data Analysis" name="keywords">
 
-    <link href="assets/img/DSC_1913.JPG" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 
 </head>
 
 <body class="portfolio-details-page">
 
-    <header id="header" class="header d-flex flex-column justify-content-center">
+  <header id="header" class="header d-flex flex-column justify-content-center">
 
-        <i class="header-toggle d-xl-none bi bi-list"></i>
+    <i class="header-toggle d-xl-none bi bi-list"></i>
 
-        <nav id="navmenu" class="navmenu">
-            <ul>
-                <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-                <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-            </ul>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Data Cleaning Project</li>
+          </ol>
         </nav>
+        <h1>Data Cleaning of Absenteeism Dataset with Python</h1>
+      </div>
+    </div><section id="portfolio-details" class="portfolio-details section">
 
-    </header>
+      <div class="container" data-aos="fade-up">
 
-    <main class="main">
+        <div class="row justify-content-between gy-4 mt-4">
 
-        <div class="page-title" data-aos="fade">
-            <div class="container">
-                <nav class="breadcrumbs">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="current">Python Project: Data Cleaning of Absenteeism Dataset</li>
-                    </ol>
-                </nav>
-                <h1>Data Cleaning of Absenteeism Dataset</h1>
-            </div>
-        </div>
-        <section id="portfolio-details" class="portfolio-details section">
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Absenteeism Data Cleaning and Preprocessing</h2>
 
-            <div class="container" data-aos="fade-up">
+              <p>
+                This project showcases my data cleaning and preprocessing skills using the <strong>Python Pandas</strong> library within a Jupyter Notebook environment. The objective was to take a raw dataset on employee absenteeism and transform it into a clean, well-structured format suitable for analysis and machine learning modeling.
+              </p>
 
-                <div style="max-width: 100%; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                        <iframe
-                            title="Data Cleaning of Absenteeism Dataset"
-                            width="100%"
-                            height="100%"
-                            src="https://nbviewer.org/github/karomajesty/data-cleaning-with-python-Absenteeism-dataset/blob/main/Data%20Cleaning%20of%20Absenteeism%20dataset.ipynb"
-                            frameborder="0"
-                            allowFullScreen="true"
-                            style="position: absolute; top: 0; left: 0; border: none;"
-                        >
-                            Your browser does not support iframes. Please view the notebook directly <a href="https://nbviewer.org/github/karomajesty/data-cleaning-with-python-Absenteeism-dataset/blob/main/Data%20Cleaning%20of%20Absenteeism%20dataset.ipynb" target="_blank">here</a>.
-                        </iframe>
-                    </div>
-                </div>
+              <h4>Tools Used</h4>
+              <ul>
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>Jupyter Notebook</li>
+              </ul>
 
-                <div class="row justify-content-between gy-4 mt-4">
+              <hr>
 
-                    <div class="col-lg-8" data-aos="fade-up">
-                        <div class="portfolio-description">
-                            <h2>Comprehensive Data Cleaning of Absenteeism Records</h2>
+              <h3>Data Cleaning and Preprocessing Steps</h3>
+              <p>The following steps were taken to clean and prepare the dataset.</p>
 
-                            <p>
-                                This project details the rigorous process of cleaning and preprocessing a real-world absenteeism dataset using Python. Effective data cleaning is a critical first step in any data analysis or machine learning workflow, ensuring the reliability and accuracy of subsequent insights. This notebook demonstrates practical techniques to handle various data inconsistencies, missing values, and prepare the dataset for predictive modeling or descriptive analysis.
-                            </p>
+              <h5>Step 1: Initial Data Loading and Exploration</h5>
+              <p>The first step was to load the dataset and get a high-level overview of its structure, data types, and missing values.</p>
+              <pre><code class="language-python">
+import pandas as pd
 
-                            <h4>Project Goals & Challenges Addressed</h4>
-                            <p>
-                                The primary objectives of this data cleaning project include:
-                            </p>
-                            <ul>
-                                <li><strong>Handling Missing Values:</strong> Identifying and appropriately addressing missing data points across various columns.</li>
-                                <li><strong>Data Type Conversion:</strong> Ensuring all columns are set to their correct data types (e.g., categorical, numerical, datetime).</li>
-                                <li><strong>Outlier Detection and Treatment:</strong> Identifying and managing extreme values that could skew analysis.</li>
-                                <li><strong>Feature Engineering:</strong> Creating new features or transforming existing ones to better suit analysis, such as categorizing reasons for absence.</li>
-                                <li><strong>Dummy Variable Creation:</strong> Preparing categorical features for machine learning models.</li>
-                                <li><strong>Normalization/Standardization:</strong> Scaling numerical features if needed for specific modeling approaches.</li>
-                            </ul>
+# Load the raw data
+raw_csv_data = pd.read_csv("Absenteeism-data.csv")
 
-                            <h4>Methodology & Key Python Libraries</h4>
-                            <p>
-                                The cleaning process was executed step-by-step within a Jupyter Notebook, leveraging the powerful capabilities of Python's data manipulation libraries:
-                            </p>
-                            <ol>
-                                <li>
-                                    <strong>Initial Data Loading & Inspection:</strong> Loaded the `Absenteeism_data.csv` using `pandas`. Performed initial checks with `df.head()`, `df.info()`, and `df.describe()` to understand the dataset's structure and identify initial issues.
-                                </li>
-                                <li>
-                                    <strong>Handling Missing Values:</strong> Explored methods like mean imputation, median imputation, or removal of rows/columns based on the context and extent of missingness.
-                                </li>
-                                <li>
-                                    <strong>Data Type Adjustments:</strong> Converted columns like 'Date' to datetime objects and ensuring 'ID', 'Reason for Absence', etc., were treated as categorical.
-                                </li>
-                                <li>
-                                    <strong>Categorical Data Transformation:</strong> Created dummy variables for categorical features such as 'Reason for Absence', 'Month of Absence', and 'Day of the Week' using `pd.get_dummies()`.
-                                </li>
-                                <li>
-                                    <strong>Feature Creation:</strong> Engineered new features like 'Education Level' or 'Social Smoker/Drinker' from existing data to enhance the dataset's analytical potential.
-                                </li>
-                                <li>
-                                    <strong>Consistency Checks:</strong> Ensured logical consistency across related columns.
-                                </li>
-                            </ol>
+# Display the first 5 rows
+print(raw_csv_data.head())
 
-                            <h4>Project Impact & Value Proposition</h4>
-                            <p>
-                                This project highlights my strong foundational skills in data preparation, which is crucial for any data-driven decision-making. By meticulously cleaning the absenteeism data, it lays the groundwork for accurate insights into factors influencing employee presence, potentially leading to better HR strategies and operational efficiency. It serves as a practical example of turning raw, messy data into a clean, actionable resource.
-                            </p>
-                        </div>
-                    </div>
+# Get a summary of the dataframe
+print(raw_csv_data.info())
+              </code></pre>
 
-                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="portfolio-info">
-                            <h3>Project Information</h3>
-                            <ul>
-                                <li><strong>Category</strong> Data Cleaning, Data Preprocessing, Python, Data Analysis</li>
-                                <li><strong>Project Date</strong> May 2023</li>
-                                <li><strong>Client</strong> Self-Initiated Project</li>
-                                <li><strong>Project URL</strong> <a href="https://github.com/karomajesty/data-cleaning-with-python-Absenteeism-dataset" target="_blank">View Live Notebook</a></li>
-                                <li><a href="https://github.com/karomajesty/data-cleaning-with-python-Absenteeism-dataset" class="btn-visit align-self-start" target="_blank">View Analysis</a></li>
-                            </ul>
-                            <h3>Tools & Technologies</h3>
-                            <ul>
-                                <li>Python</li>
-                                <li>Data Cleaning</li>
-                                <li>Data Preprocessing</li>
-                                <li>Pandas</li>
-                                <li>NumPy</li>
-                                <li>Matplotlib</li>
-                                <li>Seaborn</li>
-                                <li>Jupyter Notebook</li>
-                            </ul>
-                        </div>
-                    </div>
+              <p class="mt-3"><strong>Output of raw_csv_data.head():</strong></p>
+              <img src="assets/img/raw data csv.png" class="img-fluid rounded shadow-sm my-3" alt="Screenshot of the raw data's first five rows">
 
-                </div>
+              <p class="mt-3"><strong>Output of raw_csv_data.info():</strong></p>
+              <img src="assets/img/df info.png" class="img-fluid rounded shadow-sm my-3" alt="Screenshot of the data info summary">
 
-            </div>
+              <hr>
 
-        </section>
-    </main>
+              <h5>Step 2: Dropping Unnecessary Columns</h5>
+              <p>The 'ID' column was identified as a unique identifier for each employee and not a feature that would be useful for analysis. Therefore, it was dropped.</p>
+              <pre><code class="language-python">
+# Create a copy to preserve the original data
+df = raw_csv_data.copy()
 
-    <section id="contact" class="contact section">
+# Drop the 'ID' column
+df = df.drop(['ID'], axis=1)
+              </code></pre>
 
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Contact</h2>
-            <p></p>
-        </div>
-        <div class="container" data-aos="fade" data-aos-delay="100">
+              <hr>
 
-            <div class="row gy-4">
+              <h5>Step 3: Handling Categorical Data ('Reason for Absence')</h5>
+              <p>The 'Reason for Absence' column contained categorical data. To make it suitable for machine learning, I used one-hot encoding to convert these categories into numerical dummy variables.</p>
+              <pre><code class="language-python">
+# Get dummy variables for the 'Reason for Absence' column
+reason_columns = pd.get_dummies(df['Reason for Absence'], drop_first=True)
+              </code></pre>
 
-                <div class="col-lg-4">
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bi bi-geo-alt flex-shrink-0"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Lagos, Nigeria</p>
-                        </div>
-                    </div>
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bi bi-telephone flex-shrink-0"></i>
-                        <div>
-                            <h3>Call me</h3>
-                            <p>+(234) 916 709 1342</p>
-                            <p>+(234) 802 554 5280</p>
-                        </div>
-                    </div>
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                        <i class="bi bi-envelope flex-shrink-0"></i>
-                        <div>
-                            <h3>Email me</h3>
-                            <p>Onoriose1@outlook.com</p>
-                        </div>
-                    </div>
-                </div>
+              <hr>
+
+              <h5>Step 4: Date and Time Manipulation</h5>
+              <p>The 'Date' column was converted from a string to a datetime object. From this, I extracted the month and the day of the week to create new, potentially insightful features.</p>
+              <pre><code class="language-python">
+# Convert 'Date' column to datetime objects
+df['Date'] = pd.to_datetime(df['Date'], format='%d/%m/%Y')
+
+# Extract month value
+df['Month Value'] = df['Date'].apply(lambda x: x.month)
+
+# Extract day of the week
+df['Day of the Week'] = df['Date'].apply(lambda x: x.weekday())
+              </code></pre>
+
+              <hr>
+
+              <h5>Step 5: Final Cleaned Dataset</h5>
+              <p>After all the cleaning and preprocessing steps, a final, clean dataframe was created, ready for analysis.</p>
+              <pre><code class="language-python">
+# Create a final cleaned dataframe
+df_cleaned = df.copy()
+
+# Display the head of the cleaned dataframe
+print(df_cleaned.head(10))
+              </code></pre>
+
+              <p class="mt-3"><strong>Output of df_cleaned.head(10):</strong></p>
+              <img src="assets/img/cleaned df.png" class="img-fluid rounded shadow-sm my-3" alt="Screenshot of the final cleaned data's first ten rows">
+
+              <hr>
+
+              <h4>Results & Impact</h4>
+              <p>Through this data cleaning project, I successfully transformed a raw, messy dataset into a clean and structured one, demonstrating my ability to:
+              <ul>
+                  <li>Identify and handle irrelevant or redundant data.</li>
+                  <li>Convert categorical features into a numerical format suitable for modeling.</li>
+                  <li>Perform feature engineering by extracting valuable information from existing columns (like dates).</li>
+                  <li>Follow a systematic and organized data cleaning workflow.</li>
+                  <li>Prepare a dataset that is ready for exploratory data analysis, visualization, and machine learning.</li>
+              </ul>
+              This project is a strong testament to my foundational skills in data preparation, which are crucial for any data-driven role.</p>
+
+              <h4>Learnings and Takeaways</h4>
+              <p>This project was a great exercise in applying data cleaning techniques in a practical scenario. Key takeaways include:
+              <ul>
+                  <li>Deepened my proficiency in using the Pandas library for a wide range of data manipulation tasks.</li>
+                  <li>Gained practical experience in feature engineering, specifically with datetime objects.</li>
+                  <li>Reinforced the importance of a step-by-step, methodical approach to data cleaning.</li>
+                  <li>Improved my ability to document and present a data cleaning process clearly in a Jupyter Notebook.</li>
+              </ul>
+              </p>
 
             </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Data Cleaning & Preprocessing</li>
+                <li><strong>Tools</strong> Python, Pandas, Jupyter Notebook</li>
+                <li><strong>Project date</strong> August 2024</li>
+                <li><strong>Project Link</strong> <a href="https://github.com/your-username/your-repo-name" target="_blank">GitHub Repository</a></li>
+                <li><a href="https://github.com/your-username/your-repo-name" class="btn-visit align-self-start" target="_blank">View Notebook on GitHub</a></li>
+              </ul>
+            </div>
+          </div>
 
         </div>
 
-    </section>
-    <footer id="footer" class="footer position-relative light-background">
+      </div>
+
+    </section></main>
+
+  <footer id="footer" class="footer position-relative light-background">
     <div class="container">
-      <h3 class="sitename">Karo Majesty Onoriose</h3>
+      <h3 class="sitename">Onoriose Karo Majesty</h3>
       <p>Data Analyst</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/karomajesty"><i class="bi bi-github"></i></a>
-        <a href="http://www.linkedin.com/in/karo-onoriose"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-github"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Karo Majesty Onoriose</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          </a>
-        </div>
+      <div class="copyright">
+        <span>Copyright</span> <strong class="px-1 sitename">Onoriose Karo Majesty</strong> <span>All Rights Reserved</span>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -240,8 +226,10 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
 </body>
 
